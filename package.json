@@ -1,0 +1,37 @@
+{
+  "name": "lab",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "css-build": "sass scss/app.scss public/app.css",
+    "css-dev": "yarn css-build -w",
+    "dev-will": "vite --host 128.199.156.210 --port 5000",
+    "dev-naz": "vite --host 128.199.156.210 --port 5001",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "sirv": "sirv dist -s -p 5555 -H 128.199.156.210",
+    "devo": "concurrently -n sirv,dev-svelte,dev-scss \"yarn sirv\" \"yarn dev-svelte\" \"yarn dev-scss\"",
+    "dev-scss": "yarn build-scss -w",
+    "dev-svelte": "nodemon -w src -e ts,css,svelte --exec yarn build"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
+    "@tsconfig/svelte": "^2.0.1",
+    "bootstrap": "^5.1.3",
+    "nodemon": "^2.0.18",
+    "sass": "^1.49.11",
+    "sirv-cli": "^2.0.2",
+    "svelte": "^3.44.0",
+    "svelte-check": "^2.2.7",
+    "svelte-preprocess": "^4.10.5",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.9",
+    "vite-plugin-live-reload": "^2.1.0",
+    "@popperjs/core": "^2.11.5",
+    "@types/bootstrap": "^5.1.12",
+    "concurrently": "^7.2.2"
+  }
+}
