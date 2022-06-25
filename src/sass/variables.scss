@@ -2,3 +2,14 @@
 @import "bootstrap/scss/functions"; /* Override Bootstrap's variables here */
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/mixins";
+@import "./global.scss";
+@import "./breakpoints.scss";
+
+
+
+//colors Variable Here
+$green:#AEFF04;
+$purple: #7703C0;
+$white:#FFFFFF;
+$black: #000000;
+
