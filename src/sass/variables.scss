@@ -1,15 +1,13 @@
 /* Variables and mixins declared here will be available in all other SCSS files */
-@import "bootstrap/scss/functions"; /* Override Bootstrap's variables here */
+@import "bootstrap/scss/functions";
+/* Override Bootstrap's variables here */
+//colors Variable Here
+$green: #AEFF04;
+$purple: #7703C0;
+$white: #FFFFFF;
+$black: #000000;
+
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/mixins";
 @import "./global.scss";
 @import "./breakpoints.scss";
-
-
-
-//colors Variable Here
-$green:#AEFF04;
-$purple: #7703C0;
-$white:#FFFFFF;
-$black: #000000;
-

@@ -88,7 +88,7 @@
                     <a class="nav-link" href={"#p2e"}>P2E</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href={"#$lab"}>$LAB</a>
+                    <a class="nav-link" href={"#lab"}>$LAB</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href={"#roadmap"}>Roadmap</a>

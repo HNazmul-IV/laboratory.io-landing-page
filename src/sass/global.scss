@@ -1,0 +1,14 @@
+@keyframes zoom-in-out {
+    from {
+        transform: scale(0.8);
+    }
+
+    to {
+        transform: scale(1.1)
+    }
+}
+
+.text-green{
+    @debug $green;
+    color:$green;
+}
