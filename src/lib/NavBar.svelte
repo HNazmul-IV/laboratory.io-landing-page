@@ -5,6 +5,7 @@
 
     let shrink = false;
     let barButton: HTMLButtonElement;
+    let navbarUL: HTMLUListElement;
 
     const navbarShrink = () => (shrink = window.scrollY > 0);
     navbarShrink();
@@ -18,49 +19,31 @@
                 offset: 74,
             });
         }
+
+        // Navbar Hide on Nav Element Click
+        const navElements: NodeList = [].slice.call(navbarUL.querySelectorAll(".nav-item .nav-link"), 0);
+        navElements.forEach((elm: HTMLAnchorElement) => {
+            elm.addEventListener("click", function () {
+                if (window.getComputedStyle(barButton).display !== "none") {
+                    barButton.click();
+                }
+            });
+        });
+
+
     });
-
-
 
     onDestroy(() => {
         document.removeEventListener("scroll", navbarShrink);
     });
     // Shrink the navbar when page is scrolled
 
-    // Activate Bootstrap scrollspy on the main nav element
-
-    //Static Data
-   /*  const linkData = [
-        {
-            name: "Top",
-            link: "#top",
-        },
-        {
-            name: "About",
-            link: "#about",
-        },
-        {
-            name: "NFT Collection",
-            link: "#nft-collection",
-        },
-        {
-            name: "Play 2 Earn",
-            link: "#top",
-        },
-        {
-            name: "$LAB",
-            link: "#lab",
-        },
-        {
-            name: "Roadmap",
-            link: "#roadmap",
-        },
-    ]; */
+    // Activate Bootstrap scrollspy on the main nav elements
 </script>
 
 <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top" class:shrink>
     <div class="container-fluid more-horizontal-padding">
-        <a class="navbar-brand" href="#sec1"><img src={logo} alt="..." /></a>
+        <a class="navbar-brand" href="#top"><img src={logo} alt="..." /></a>
         <button
             bind:this={barButton}
             class="navbar-toggler"
@@ -74,7 +57,7 @@
             <span class="navbar-toggler-icon" />
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto my-2 my-lg-0">
+            <ul bind:this={navbarUL} class="navbar-nav ms-auto my-2 my-lg-0">
                 <li class="nav-item">
                     <a class="nav-link active" href={"#top"}>Top</a>
                 </li>
@@ -82,10 +65,10 @@
                     <a class="nav-link" href={"#about"}>About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href={"#nfts"}>NFTs</a>
+                    <a class="nav-link" href={"#nfts"}>NFT Collections</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href={"#p2e"}>P2E</a>
+                    <a class="nav-link" href={"#p2e"}>Pay2Earn</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href={"#lab"}>$LAB</a>
@@ -117,10 +100,13 @@
         padding-bottom: 1rem;
         background-color: $nav-bg-color;
     }
-    .nav-item > .nav-link {
-        color: white;
-        &.active {
-            color: $green;
+    .nav-item {
+        & > .nav-link {
+            color: white;
+            padding: 8px 15px;
+            &.active , &:active, &:focus {
+                color: $green;
+            }
         }
     }
 
@@ -131,8 +117,8 @@
             background-color: $nav-bg-color;
         }
         nav {
-            padding-top: 1.5rem;
-            padding-bottom: 1.5rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
             border: none;
             background-color: transparent;
             transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;

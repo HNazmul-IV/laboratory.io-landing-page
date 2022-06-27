@@ -14,26 +14,29 @@
     </div>
 
     <div class="details-wrapper text-white">
-       <div class="col-lg-10 mx-auto py-5">
-         <div class="row align-items-center ">
-            <div class="col-lg-6 ">
-                <h1 class="left-title"><span class="text-green">How</span> <br> <span class="text-green">cronos</span>  <br> <span class="text-green">chain</span> <br> got <br> captured?</h1>
-            </div>
-            <div class="col-lg-5 right-side">
-                <h4 class="text-green">How to get started?</h4>
-                <p class="poppins fs-5 fw-light">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, hic. Omnis in maiores, tempore facilis, modi aperiam porro illum, expedita voluptate corrupti repellat voluptates necessitatibus quos quaerat sed odit totam.
-                </p>
-                <p class="poppins fs-5 fw-light">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, dignissimos.</p>
+        <div class="col-lg-10 mx-auto py-5">
+            <div class="row align-items-center ">
+                <div class="col-lg-6 ">
+                    <h1 class="left-title">
+                        <span class="text-green">How</span> <br /> <span class="text-green">cronos</span> <br /> <span class="text-green">chain</span> <br /> got <br /> captured?
+                    </h1>
+                </div>
+                <div class="col-lg-5 right-side">
+                    <h4 class="text-green">How to get started?</h4>
+                    <p class="poppins fs-5 fw-light">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, hic. Omnis in maiores, tempore facilis, modi aperiam porro illum, expedita voluptate corrupti repellat
+                        voluptates necessitatibus quos quaerat sed odit totam.
+                    </p>
+                    <p class="poppins fs-5 fw-light">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, dignissimos.</p>
+                </div>
             </div>
         </div>
-       </div>
     </div>
 </section>
 
 <style lang="scss">
     #about {
-        padding-bottom:4rem;
+        padding-bottom: 4rem;
         .video-wrapper {
             position: relative;
             z-index: 1;
@@ -68,23 +71,22 @@
             }
         }
 
-        .details-wrapper{
-            .left-title{
-                font-size: clamp(50px,5vw,94px);
+        .details-wrapper {
+            .left-title {
+                font-size: clamp(40px, 5vw, 94px);
                 line-height: 66px;
 
-
-                @include sm{
+                @include sm {
                     line-height: 44px;
                     margin-bottom: 4rem;
                     text-align: center;
                 }
             }
 
-            .right-side{
+            .right-side {
                 padding: 2rem;
-                @include sm{
-                    text-align:center;
+                @include sm {
+                    text-align: center;
                 }
             }
         }

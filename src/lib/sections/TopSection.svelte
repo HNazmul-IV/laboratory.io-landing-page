@@ -5,11 +5,13 @@
     import CRAZY_TEXT from "../../assets/creazy-text.png";
     import CHAIN_TEXT from "../../assets/chain-text.png";
     import HEADER_RIBON from "../../assets/header-ribon.png";
+    import ShaderVideo from './ShaderVideo.svelte'
 </script>
 
 <header id="top">
     <div class="header-wrapper">
-        <img class="header-smoke" src={HEADER_SMOKE} alt="background" />
+       <img class="header-smoke" src={HEADER_SMOKE} alt="background" />
+	<!-- <ShaderVideo/> -->
         <div class="nft">
             <img src={HEADER_NFT_IMG} alt="" />
         </div>
@@ -52,12 +54,16 @@
             z-index: 2;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
-            width: 37vw;
+            transform: translate(-50%, -55%);
+            width: 30vw;
+        }
+        .nft > img {
+            transform: translate(-54%, -60%);
+
         }
 
         .cros > img {
-            width: 53vw;
+            width: 45vw;
             z-index: 1;
         }
 
@@ -72,10 +78,10 @@
         }
 
         .chain-text {
-            right: 9%;
+            right: 11%;
         }
         .creazy-text {
-            left: 9%;
+            left: 10%;
         }
         .header-ribon {
             width: 100%;
