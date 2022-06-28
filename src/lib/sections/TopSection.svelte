@@ -33,7 +33,7 @@
 <style lang="scss">
     header {
         width: 100%;
-        @include sm {
+        @include media-breakpoint-down(sm) {
             padding-top: 3rem;
         }
     }

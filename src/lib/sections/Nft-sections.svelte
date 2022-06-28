@@ -118,7 +118,7 @@
             .large-text{
                 font-size:2.5em;
             }
-            @include sm{
+            @include media-breakpoint-down(sm){
                 padding:1.5em 1em;
             }
         }

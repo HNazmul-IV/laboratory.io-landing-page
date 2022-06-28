@@ -1,16 +1,26 @@
 @import url(//db.onlinewebfonts.com/c/99501fdab737541e9315ceaf9229370f?family=Monument+Extended);
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-@font-face {
-  font-family: "Monument Extended";
-  src: url("//db.onlinewebfonts.com/t/55d433372d270829c51e2577a78ef12d.eot");
-  src: url("//db.onlinewebfonts.com/t/55d433372d270829c51e2577a78ef12d.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/55d433372d270829c51e2577a78ef12d.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/55d433372d270829c51e2577a78ef12d.woff") format("woff"), url("//db.onlinewebfonts.com/t/55d433372d270829c51e2577a78ef12d.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/55d433372d270829c51e2577a78ef12d.svg#Monument Extended") format("svg");
-}
+$font-family-sans-serif: "Monument Extended", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 
-* {
-  font-family: "Monument Extended";
-}
+$input-btn-focus-width: 0 !default;
 
+$green: #AEFF04;
+$purple: #7703C0;
+$white: #FFFFFF;
+$black: #000000;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+@import 'bootstrap/scss/bootstrap.scss';
+
+/* multiple components */
 .poppins {
   font-family: 'Poppins', sans-serif;
 }
@@ -19,3 +29,28 @@ body {
   background-color: black;
   overflow-x: hidden;
 }
+
+.text-green {
+  @debug $green;
+  color: $green;
+}
+
+.vanish-select {
+  user-select: none;
+
+  &::selection {
+    background: inherit;
+    color: inherit;
+  }
+}
+
+
+
+
+
+
+
+
+// @import './section-top.scss';
+// @import './section-other.scss';
+// @import './section-other.scss';

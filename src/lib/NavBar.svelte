@@ -29,8 +29,6 @@
                 }
             });
         });
-
-
     });
 
     onDestroy(() => {
@@ -43,7 +41,7 @@
 
 <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top" class:shrink>
     <div class="container-fluid more-horizontal-padding">
-        <a class="navbar-brand" href="#top"><img src={logo} alt="..." /></a>
+        <a class="navbar-brand" href={"#"}><img src={logo} alt="..." /></a>
         <button
             bind:this={barButton}
             class="navbar-toggler"
@@ -59,13 +57,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul bind:this={navbarUL} class="navbar-nav ms-auto my-2 my-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" href={"#top"}>Top</a>
+                    <a class="nav-link active" href={"#"}>Top</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href={"#about"}>About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href={"#nfts"}>NFT Collections</a>
+                    <a class="nav-link" href={"#nfts"}>NFT&nbsp;Collections</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href={"#p2e"}>Pay2Earn</a>
@@ -104,7 +102,9 @@
         & > .nav-link {
             color: white;
             padding: 8px 15px;
-            &.active , &:active, &:focus {
+            &.active,
+            &:active,
+            &:focus {
                 color: $green;
             }
         }
@@ -121,7 +121,7 @@
             padding-bottom: 2rem;
             border: none;
             background-color: transparent;
-            transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+            transition: padding-top 0.5s ease-in-out, padding-bottom 0.5s ease-in-out, background 0.5s ease-in-out;
         }
     }
 </style>

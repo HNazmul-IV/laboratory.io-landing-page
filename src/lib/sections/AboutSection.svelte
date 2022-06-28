@@ -76,7 +76,7 @@
                 font-size: clamp(40px, 5vw, 94px);
                 line-height: 66px;
 
-                @include sm {
+                @include media-breakpoint-down(sm) {
                     line-height: 44px;
                     margin-bottom: 4rem;
                     text-align: center;
@@ -85,7 +85,7 @@
 
             .right-side {
                 padding: 2rem;
-                @include sm {
+                @include media-breakpoint-down(sm) {
                     text-align: center;
                 }
             }

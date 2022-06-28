@@ -30,12 +30,15 @@
     .details {
         & > h2 {
             font-size: #{clamp(30px, 4vw, 48px)};
-            @include min-xxl {
+            font-weight: 900;
+            @include media-breakpoint-up(xxl) {
             }
         }
         & > p {
             line-height: #{clamp(14px,2vw,50px)};
             font-size: #{clamp(12px, 1.4vw, 24px)};
+            font-weight: normal;
+
         }
     }
 </style>

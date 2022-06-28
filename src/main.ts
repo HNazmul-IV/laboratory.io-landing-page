@@ -1,4 +1,3 @@
-import "./sass/bootstrap.scss";
 import "./sass/app.scss";
 import App from "./App.svelte";
 

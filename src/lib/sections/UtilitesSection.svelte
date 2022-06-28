@@ -38,6 +38,7 @@
         font-size: clamp(40px, 8vw, 154px);
         padding: clamp(10px, 4vw, 30px);
         color: white;
+        font-weight: 500;
     }
     .character-nft {
         width: 40vw;
