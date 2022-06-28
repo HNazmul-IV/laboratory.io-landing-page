@@ -1,7 +1,7 @@
 <script lang="ts">
-    import UPPER_RIBON from "../../assets/lab-ribon.png";
+    import UPPER_RIBON from "../../assets/lab-ribon.webp";
     import BACKGROUND from "../../assets/lab-background.png";
-    import MMF_LOGO from "../../assets/mmf-logo.png";
+    import MMF_LOGO from "../../assets/mmf-logo.webp";
     import COINGECKO_LOGR from "../../assets/coingecko-logo.webp";
     import { globals } from "svelte/internal";
 
@@ -32,7 +32,7 @@
     </div>
 
     <div class="content-wrapper">
-        <div class="content col-9 offset-lg-3 offset-2 p-5">
+        <div class="content col-mi-9 offset-lg-3 offset-md-2 p-3 p-md-5">
             <div class="title">
                 <h1 class="headline text-black"><span class="large">$LAB</span> Token</h1>
                 <h3 class="subtitle text-black">Cronos Contact address</h3>

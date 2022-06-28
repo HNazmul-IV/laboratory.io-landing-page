@@ -1,7 +1,7 @@
 <script lang="ts">
-    import CHARACTER_NFT from "../../assets/utilities-character.png";
+    import CHARACTER_NFT from "../../assets/utilities-character.webp";
     import UtilitiesCard from "../Cards/UtilitiesCard.svelte";
-    import RIBON_IMG from "../../assets/utility-section-ribon.png";
+    import RIBON_IMG from "../../assets/utility-section-ribon.webp";
 </script>
 
 <section id="utilites">
@@ -31,7 +31,7 @@
 
 <style lang="scss">
     section {
-        background: url("../../assets/black-green-texture.png") no-repeat center / cover;
+        background: url("../../assets/black-green-texture.webp") no-repeat center / cover;
         overflow-x: hidden;
     }
     section > .title h1 {

@@ -1,7 +1,7 @@
 <script lang="ts">
-    import UPPER_IMG from "../../assets/play2earn-upper.png";
-    import CHARACTER_IMG from "../../assets/p2e-nft.png";
-    import PHON_IMG from "../../assets/p2e-mobile.png";
+    import UPPER_IMG from "../../assets/play2earn-upper.webp";
+    import CHARACTER_IMG from "../../assets/p2e-nft.webp";
+    import PHON_IMG from "../../assets/p2e-mobile.webp";
 </script>
 
 <section id="p2e">
@@ -13,7 +13,7 @@
 
     <div class="down-section-wrapper">
         <div class="row align-items-center">
-            <div class="col-md-5">
+            <div class="col-md-5 d-none d-lg-block">
                 <div class="character">
                     <img src={CHARACTER_IMG} alt="" />
                 </div>
@@ -38,9 +38,12 @@
 
 <style lang="scss">
     section {
-        background: url("../../assets/black-green-texture.png") no-repeat center / cover;
+        background: url("../../assets/black-green-texture.webp") no-repeat center / cover;
         overflow-x: hidden;
-        margin-top: -2%;
+        @include media-breakpoint-up(md) {
+            margin-top: -2%;
+        }
+       
     }
 
     .p2e-upper-image {
@@ -52,7 +55,9 @@
     }
 
     .down-section-wrapper {
-        margin-top: -15vw;
+         @include media-breakpoint-up(md) {
+            margin-top: -15vw;
+        }
     }
     .character {
         & > img {
@@ -60,9 +65,9 @@
             transform: translateX(-1vw);
         }
     }
-    .phone-img{
-        & > img{
-            transform:translateX(10px)
+    .phone-img {
+        & > img {
+            transform: translateX(10px);
         }
     }
     .details {
@@ -74,11 +79,11 @@
             & > p {
                 font-size: clamp(16px, 1.2vw, 24px);
             }
-            & > .green-button{
+            & > .green-button {
                 background: $green;
-                padding:0.7rem 2.5rem;
-                font-size: 20px ;
-                border-radius:15px;
+                padding: 0.7rem 2.5rem;
+                font-size: 20px;
+                border-radius: 15px;
                 box-shadow: 0px 0px 20px 3px $purple;
                 border: none;
                 margin-top: 2rem;
