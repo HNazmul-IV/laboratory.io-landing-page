@@ -53,10 +53,12 @@
 <style lang="scss">
     section {
         background: url("../../assets/black-green-texture.png") no-repeat center / cover;
-        overflow-x: hidden;
         & > .title {
             & > h1 {
-                font-size: clamp(80px, 5vw, 156px);
+                font-size: clamp(50px, 8vw, 154px);
+                padding: clamp(10px, 4vw, 30px);
+                color: white;
+                font-weight: 500;
             }
         }
         .roadmap-content-wrapper {
@@ -76,13 +78,21 @@
             & > .button-content {
                 position: absolute;
                 top: 2vw;
-                left: 1vw;
+                left:0%;
                 color: $white;
                 padding: 2rem 4rem;
+                width:100%;
+                @include media-breakpoint-down(sm) {
+                    padding: 10px;
+                    text-align: center;
+                }
                 & > .wrapper {
-                    width: clamp(500px, 45vw, 820px);
+                    width: clamp(300px, 45vw, 820px);
                     & > h1 {
-                        font-size: clamp(3rem, 7vw, 80px);
+                        font-size: clamp(1rem, 7vw, 80px);
+                    }
+                    @include media-breakpoint-down(sm) {
+                        margin: auto;
                     }
                     & > a.btn {
                         background: $green;
@@ -91,6 +101,15 @@
                         font-size: 32px;
                         border-radius: 20px;
                         margin-top: 2rem;
+                        @include media-breakpoint-down(sm) {
+                            padding: 0.3rem 1em;
+                            font-size: 20px;
+                            border-radius: 10px;
+                            margin-top: 1rem;
+                            & > img {
+                                width: 40px;
+                            }
+                        }
                     }
                 }
             }

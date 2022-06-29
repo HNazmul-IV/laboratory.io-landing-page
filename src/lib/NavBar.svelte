@@ -82,8 +82,10 @@
 
 <style lang="scss">
     .more-horizontal-padding {
-        padding-left: 3rem;
-        padding-right: 3rem;
+        @include media-breakpoint-up(md) {
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
     }
     .navbar-brand img {
         height: 2rem;
@@ -101,7 +103,7 @@
         z-index: 1;
         font-size: 18px;
         margin: 0px;
-        border:none;
+        border: none;
         &::after {
             position: absolute;
             content: "";
@@ -121,6 +123,7 @@
         padding-top: 1rem;
         padding-bottom: 1rem;
         background-color: $nav-bg-color;
+        width: 100%;
     }
     .nav-item {
         & > .nav-link {

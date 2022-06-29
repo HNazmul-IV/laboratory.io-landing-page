@@ -11,7 +11,7 @@
 
     <div class="utilities-wrapper">
         <div class="row align-items-center">
-            <div class="col-md-6 offset-1">
+            <div class="col-md-6 offset-md-1">
                 <UtilitiesCard />
                 <UtilitiesCard />
                 <UtilitiesCard />
@@ -35,7 +35,7 @@
         overflow-x: hidden;
     }
     section > .title h1 {
-        font-size: clamp(40px, 8vw, 154px);
+        font-size: clamp(62px, 8vw, 154px);
         padding: clamp(10px, 4vw, 30px);
         color: white;
         font-weight: 500;

@@ -23,7 +23,7 @@
                     <div class="phone-img w-100 ">
                         <img src={PHON_IMG} class="w-100" alt="" />
                     </div>
-                    <div class="details mt-5 pt-4">
+                    <div class="details mt-5 py-4 pb-md-0">
                         <div class="wrapper text-center col-lg-8 mx-auto">
                             <h3 class="text-green">About game</h3>
                             <p class="text-white">NFT collection packed with utilities NFT collection packed with utilities NFT collection packed with utilities NFT collection packed</p>

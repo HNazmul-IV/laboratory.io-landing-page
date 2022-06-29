@@ -4,7 +4,7 @@
 
 <div class="utilities-card ">
     <div class="card-wrapper d-flex align-items-center">
-        <div class="image flex-shrink-0 me-5">
+        <div class="image flex-shrink-0 me-3 me-md-5">
             <img class="" src={CARD_LEFT_IMAGE} alt="" />
         </div>
         <div class="details">

@@ -15,7 +15,7 @@
 
     <div class="details-wrapper text-white">
         <div class="col-lg-10 mx-auto py-5">
-            <div class="row align-items-center ">
+            <div class="row w-100 align-items-center ">
                 <div class="col-lg-6 ">
                     <h1 class="left-title">
                         <span class="text-green">How</span> <br /> <span class="text-green">cronos</span> <br /> <span class="text-green">chain</span> <br /> got <br /> captured?

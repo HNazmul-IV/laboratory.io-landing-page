@@ -38,7 +38,7 @@
                 <h3 class="subtitle text-black">Cronos Contact address</h3>
             </div>
             <div class="copy-btn ">
-                <div class="input-group rounded-pill mb-3 gap-2 p-3 bg-black">
+                <div class="input-group rounded-pill mb-3 gap-2 p-md-3 p-1 bg-black">
                     <input
                         bind:this={textInput}
                         type="text"
@@ -63,6 +63,7 @@
     #lab {
         position: relative;
         z-index: 1;
+        overflow: hidden;
         .upper-ribon {
             z-index: 1;
             position: relative;
@@ -75,6 +76,11 @@
             z-index: 1;
             & > img {
                 width: 100%;
+                @include media-breakpoint-down(sm) {
+                    height: 300px;
+                    object-fit: cover;
+                    object-position: 20% top;
+                }
             }
         }
     }
@@ -84,7 +90,11 @@
         width: 100%;
         height: calc(100% - 7vw);
         z-index: 1;
+        text-align: center;
         top: 17%;
+        @include media-breakpoint-up(md) {
+            text-align: left;
+        }
         .title {
             & > .headline {
                 font-size: 4vw;
@@ -95,13 +105,25 @@
             & > .subtitle {
                 font-size: 2.8vw;
             }
+            @include media-breakpoint-down(md) {
+                & > .headline {
+                    font-size: 3.5vw;
+                     & > .large {
+                        font-size: 6.4vw;
+                    }
+                }
+            }
         }
         .copy-btn {
-            transform: translateX(-5%);
+            @include media-breakpoint-up(md) {
+                transform: translateX(-5%);
+            }
             .input-group {
                 & > input {
                     display: inline-block;
-                    font-size: clamp(18px, 1.4vw, 41px);
+                    @include media-breakpoint-up(md) {
+                        font-size: clamp(18px, 1.4vw, 41px);
+                    }
                 }
             }
             #copy-btn {
@@ -125,7 +147,17 @@
             color: $green;
             min-width: 220px;
             & > img {
-                height: clamp(30px, 2.5vw, 50px);
+                height: clamp(20px, 2.5vw, 50px);
+            }
+        }
+        @include media-breakpoint-down(md) {
+            justify-content: center;
+            gap:10px;
+            flex-wrap: wrap;
+            button {
+                padding:5px 10px;
+                min-width: initial;
+                font-size: 16px;
             }
         }
     }
