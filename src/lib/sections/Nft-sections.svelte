@@ -1,7 +1,7 @@
 <script lang="ts">
-    import HEADER_RIBON from "../../assets/nft-section-ribon.webp";
-    import NFT_SLIDE_1 from "../../assets/nft-slide-one.webp";
-    import NFT_SLIDE_2 from "../../assets/nft-slide-2.webp";
+    import HEADER_RIBON from "../../assets/nft-section-ribon.png";
+    import NFT_SLIDE_1 from "../../assets/nft-slide-one.png";
+    import NFT_SLIDE_2 from "../../assets/nft-slide-two.png";
     import PROD_LOGO from "../../assets/logo-dark-prod.svg"
 </script>
 
@@ -53,7 +53,7 @@
 
 <style lang="scss">
     section#nfts {
-        background: url("../../assets/black-green-texture.webp") no-repeat center / cover;
+        background: url("../../assets/black-green-texture.png") no-repeat center / cover;
         overflow-x: hidden;
         .nft-showcase-wrapper {
             .ribon,

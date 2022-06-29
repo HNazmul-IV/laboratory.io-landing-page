@@ -1,6 +1,6 @@
 <script lang="ts">
-    import VIDEO_PL from "../../assets/video-thumbnail.webp";
-    import PLAY_BUTTON from "../../assets/play-button.webp";
+    import VIDEO_PL from "../../assets/video-thumbnail.png";
+    import PLAY_BUTTON from "../../assets/play-button.png";
 </script>
 
 <section id="about">

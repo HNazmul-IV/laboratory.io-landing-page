@@ -1,5 +1,5 @@
 <script lang="ts">
-    import CARD_LEFT_IMAGE from "../../assets/utilities-card-image.webp";
+    import CARD_LEFT_IMAGE from "../../assets/utilities-card-image.png";
 </script>
 
 <div class="utilities-card ">

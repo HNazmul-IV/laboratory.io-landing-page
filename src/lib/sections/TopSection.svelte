@@ -1,10 +1,10 @@
 <script lang="ts">
-    import HEADER_NFT_IMG from "../../assets/header-nft.webp";
-    import HEADER_SMOKE from "../../assets/header-mash-bg.webp";
-    import HEADER_CROS_IMG from "../../assets/header-cros.webp";
-    import CRAZY_TEXT from "../../assets/creazy-text.webp";
-    import CHAIN_TEXT from "../../assets/chain-text.webp";
-    import HEADER_RIBON from "../../assets/header-ribon.webp";
+    import HEADER_NFT_IMG from "../../assets/header-nft.png";
+    import HEADER_SMOKE from "../../assets/header-mash-bg.png";
+    import HEADER_CROS_IMG from "../../assets/header-cros.png";
+    import CRAZY_TEXT from "../../assets/creazy-text.png";
+    import CHAIN_TEXT from "../../assets/chain-text.png";
+    import HEADER_RIBON from "../../assets/header-ribon.png";
     import ShaderVideo from './ShaderVideo.svelte'
 </script>
 

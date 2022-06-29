@@ -1,7 +1,7 @@
 <script lang="ts">
-    import UPPER_RIBON from "../../assets/lab-ribon.webp";
+    import UPPER_RIBON from "../../assets/lab-ribon.png";
     import BACKGROUND from "../../assets/lab-background.png";
-    import MMF_LOGO from "../../assets/mmf-logo.webp";
+    import MMF_LOGO from "../../assets/mmf-logo.png";
     import COINGECKO_LOGR from "../../assets/coingecko-logo.webp";
     import { globals } from "svelte/internal";
 
@@ -46,7 +46,7 @@
                         value="0x75f55e718ea51191966f256893bd96db2de9ee94"
                         readonly
                     />
-                    <button on:click={handleCopyButton} class="input-group-text rounded-pill {copyStatus === 'Copied' ? 'bg-success text-white' : ''}" id="copy-btn">{copyStatus}</button>
+                    <button on:click={handleCopyButton} class="input-group-text rounded-pill {copyStatus === 'Copied' ? 'bg-success' : ''}" id="copy-btn">{copyStatus}</button>
                 </div>
             </div>
 

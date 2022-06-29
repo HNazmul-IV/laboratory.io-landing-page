@@ -1,7 +1,7 @@
 <script lang="ts">
-    import UPPER_IMG from "../../assets/play2earn-upper.webp";
-    import CHARACTER_IMG from "../../assets/p2e-nft.webp";
-    import PHON_IMG from "../../assets/p2e-mobile.webp";
+    import UPPER_IMG from "../../assets/play2earn-upper.png";
+    import CHARACTER_IMG from "../../assets/p2e-nft.png";
+    import PHON_IMG from "../../assets/p2e-mobile.png";
 </script>
 
 <section id="p2e">
@@ -38,7 +38,7 @@
 
 <style lang="scss">
     section {
-        background: url("../../assets/black-green-texture.webp") no-repeat center / cover;
+        background: url("../../assets/black-green-texture.png") no-repeat center / cover;
         overflow-x: hidden;
         @include media-breakpoint-up(md) {
             margin-top: -2%;

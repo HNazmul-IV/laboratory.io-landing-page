@@ -42,6 +42,7 @@
 <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top" class:shrink>
     <div class="container-fluid more-horizontal-padding">
         <a class="navbar-brand" href={"#"}><img src={logo} alt="..." /></a>
+        <button class="labdapps"><span class="text-green">Lab</span><span class="text-white">Dapps</span></button>
         <button
             bind:this={barButton}
             class="navbar-toggler"
@@ -92,6 +93,29 @@
     background-color: #212529;
   }*/
     $nav-bg-color: black;
+
+    .labdapps {
+        background: transparent;
+        position: relative;
+        padding: 7px 15px;
+        z-index: 1;
+        font-size: 18px;
+        margin: 0px;
+        border:none;
+        &::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            z-index: -1;
+            border: 3px solid $green;
+            border-radius: 50px;
+            filter: drop-shadow(0px 0px 2px #aeff04);
+        }
+    }
+
     nav {
         background-color: $nav-bg-color;
         padding-top: 1rem;
