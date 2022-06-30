@@ -17,9 +17,12 @@
     "dev-svelte": "nodemon -w src -e ts,css,svelte --exec yarn build"
   },
   "devDependencies": {
+    "@popperjs/core": "^2.11.5",
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
     "@tsconfig/svelte": "^2.0.1",
+    "@types/bootstrap": "^5.1.12",
     "bootstrap": "^5.1.3",
+    "concurrently": "^7.2.2",
     "nodemon": "^2.0.18",
     "sass": "^1.49.11",
     "sirv-cli": "^2.0.2",
@@ -29,9 +32,10 @@
     "tslib": "^2.3.1",
     "typescript": "^4.5.4",
     "vite": "^2.9.9",
-    "vite-plugin-live-reload": "^2.1.0",
-    "@popperjs/core": "^2.11.5",
-    "@types/bootstrap": "^5.1.12",
-    "concurrently": "^7.2.2"
+    "vite-plugin-live-reload": "^2.1.0"
+  },
+  "dependencies": {
+    "@types/p5": "^1.4.2",
+    "p5": "^1.4.1"
   }
 }

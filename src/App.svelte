@@ -1,23 +1,11 @@
 <script lang="ts">
-  import NavBar from './lib/NavBar.svelte'
-  const sections = []
-  for(let i = 1; i < 10; ++i) sections.push(i)
+  import ShaderVideo from './ShaderVideo.svelte'
 </script>
-<NavBar/>
-{#each sections as section }
-<section id={'sec'+section}><h1>Section {section}</h1></section>
-{/each}
+
+<div id="vid"><ShaderVideo/></div>
+
 <style>
-  section {
-    padding: 8rem 0;
-    padding-top: 11rem;
+  #vid {
+    width:100vw
   }
-  #sec1 {
-    background-color:green;
-  }
-  #sec2 { background-color: blue;}
-  #sec3 { background-color: red;}
-  #sec4 { background-color: purple;}
-  #sec5 { background-color: orange;}
-  #sec6 { background-color: cyan;}
 </style>

@@ -100,6 +100,11 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.0.0.tgz#67c7b724e1bcdd7a8821ce0d5ee184d3b4dd525a"
   integrity sha512-cHlGmko4gWLVI27cGJntjs/Sj8th9aYwplmZFwmmgYQQvL5NUsgVJG7OddLvNfLqYS31KFN0s3qlaD9qCaxACA==
 
+"@types/p5@^1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@types/p5/-/p5-1.4.2.tgz#aee3142741254a38ab9a95038d5b777901a2be1e"
+  integrity sha512-tzJ2PdmeXlX8tidbA1/pQEhs0MHVWam0K4ux5ri0GrZXhBU3QrpTpSVzNaBDuo6KheryHdH8wR82x1nPvxo42g==
+
 "@types/pug@^2.0.4":
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/@types/pug/-/pug-2.0.6.tgz#f830323c88172e66826d0bde413498b61054b5a6"
@@ -984,6 +989,11 @@ p-cancelable@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/p-cancelable/-/p-cancelable-1.1.0.tgz#d078d15a3af409220c886f1d9a0ca2e441ab26cc"
   integrity sha512-s73XxOZ4zpt1edZYZzvhqFa6uvQc1vwUa0K0BdtIZgQMAJj9IbebH+JkgKZc9h+B05PKHLOTl4ajG1BmNrVZlw==
+
+p5@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/p5/-/p5-1.4.1.tgz#979739a576eb566225642b5d25cf7bb8945b70dd"
+  integrity sha512-3/X+qb0bK2Cg8nuZNpZZvzxkeUSRghOf0S+l8c+U8yIkUTVSbbcV0R8y96rx3InVBVhk8cH9kFC93VlZZElqSw==
 
 package-json@^6.3.0:
   version "6.5.0"
