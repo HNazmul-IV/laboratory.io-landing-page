@@ -3,6 +3,20 @@
     import NFT_SLIDE_1 from "../../assets/nft-slide-one.png";
     import NFT_SLIDE_2 from "../../assets/nft-slide-two.png";
     import PROD_LOGO from "../../assets/logo-dark-prod.svg";
+    import NftSlide from "../Sliders/NftSlide.svelte";
+    import { onMount } from "svelte";
+    import { diretionsEnum } from "../Animate/Nfts_Scroller.svelte";
+
+    let slideOneImage = [];
+    let slideTwoImage = [];
+
+    onMount(() => {
+        let n = 100;
+        for (let i = 0; i < 10; i++) {
+            slideOneImage = [...slideOneImage, `98.webp`];
+            slideTwoImage = [...slideTwoImage, `98.webp`];
+        }
+    });
 </script>
 
 <section id="nfts">
@@ -11,10 +25,10 @@
             <img src={HEADER_RIBON} alt="" />
         </div>
         <div class="slide-one">
-            <img src={NFT_SLIDE_1} alt="" />
+            <NftSlide direction={diretionsEnum.ltr} images={slideOneImage} />
         </div>
         <div class="slide-two">
-            <img src={NFT_SLIDE_2} alt="" />
+            <NftSlide images={slideTwoImage} imageTranslate={150} />
         </div>
         <div class="nft-slide-text">
             <h1 class={"text-green prime"}>Play to earn with NFT collection on cronos.</h1>
@@ -53,34 +67,29 @@
         background: url("../../assets/black-green-texture.png") no-repeat center / cover;
         overflow-x: hidden;
         .nft-showcase-wrapper {
-            .ribon,
-            .slide-one,
-            .slide-two {
+            .ribon {
                 & > img {
                     width: 100%;
                 }
             }
-            .slide-one {
-                & > img {
-                    margin-top: -6vw;
-                }
-            }
+            .slide-one,
             .slide-two {
-                & > img {
-                    margin-top: -6vw;
-                }
+                margin-top: -7%;
             }
-
             .nft-slide-text {
-                transform: rotate(-4deg);
+                transform: rotate(-3.4deg);
                 margin-top: -3vw;
                 overflow-x: hidden;
+
+                @include media-breakpoint-down(sm) {
+                    margin-top: 0px;
+                }
                 &* {
                     white-space: nowrap;
                 }
                 font-size: 16px;
                 .prime {
-                    font-size: 4em;
+                    font-size: clamp(2.3em, 11vw, 4em);
                 }
                 .second {
                     font-weight: normal;

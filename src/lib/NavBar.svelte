@@ -57,8 +57,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul bind:this={navbarUL} class="navbar-nav ms-auto my-2 my-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" href={"#"}>Top</a>
+                <li class="nav-item ">
+                    <a class="nav-link active" href={"#top"}></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href={"#about"}>About</a>
