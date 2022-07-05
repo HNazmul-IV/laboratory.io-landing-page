@@ -1,14 +1,24 @@
 <script lang="ts">
-    export let conf = { outline: false, shadow: false };
-    export let data = { titte: "", desc: "" };
+    import { onMount } from "svelte";
+    import VanillaTilt from "vanilla-tilt";
+
+    export let conf = { outline: false, shadow: false, title: "", desc: "" };
+    let card: HTMLElement;
+
+    onMount(() => {
+        VanillaTilt.init(card, {
+            max: 12,
+            speed: 300,
+        });
+    });
 </script>
 
-<article class="roadmap-card {conf.shadow ? 'shadow' : conf.outline ? 'outline' : 'pure'}">
+<article data-tilt bind:this={card} class="roadmap-card {conf.shadow ? 'shadow' : conf.outline ? 'outline' : 'pure'}">
     <div class="card-header">
-        <h3>{data.titte || "Phase 1"}</h3>
+        <h3>{conf.title || "Phase 1"}</h3>
     </div>
     <div class="card-body pt-xxl-5 p-0 col-xl-10 mx-auto">
-        <p>{data.desc || "NFT collection packed with utilities NFT collection packed with utilities NFT collection packed with utilities NFT collection packed "}</p>
+        <p>{@html conf.desc || "NFT collection packed with utilities NFT collection packed with utilities NFT collection packed with utilities NFT collection packed "}</p>
     </div>
 </article>
 

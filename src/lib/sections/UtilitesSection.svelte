@@ -2,6 +2,37 @@
     import CHARACTER_NFT from "../../assets/utilities-character.png";
     import UtilitiesCard from "../Cards/UtilitiesCard.svelte";
     import RIBON_IMG from "../../assets/utility-section-ribon.png";
+
+    const utilities_data = [
+        {
+            title: "Lab DEX",
+            desc: "The preferred DEX on Cronos and the cheapest",
+        },
+        {
+            title: "Lab Growth chambers",
+            desc: "DeFi, Stake, grow, experiment with our NFTs and LAB token",
+        },
+        {
+            title: "CERN",
+            desc: "The Head of Laboratory has experiments for our community and unique token and NFT rewards Lab Pad <br> Launch your NFT or token and be empowered by the Laboratory community",
+        },
+        {
+            title: "Community",
+            desc: "Since Nov 2021, Laboratory community have worked together to buy the best performing Cronos assets",
+        },
+        {
+            title: "Smart contract services",
+            desc: "Want to up your NFT project utility with customized/ adventure like DeFi? We provide unique smart contracts and team building services.",
+        },
+        {
+            title: "Lab Store",
+            desc: "Coming Soon",
+        },
+        {
+            title: "Play 2earn",
+            desc: "Labverse will consist of mini games that will provide opportunities for the Laboratory community to win and earn. The value of Labverse will be interlinked with Lab’s gamified DeFi.",
+        },
+    ];
 </script>
 
 <section id="utilites">
@@ -10,12 +41,11 @@
     </div>
 
     <div class="utilities-wrapper">
-        <div class="row align-items-center">
+        <div class="row">
             <div class="col-md-6 offset-md-1">
-                <UtilitiesCard />
-                <UtilitiesCard />
-                <UtilitiesCard />
-                <UtilitiesCard />
+                {#each utilities_data as data}
+                    <UtilitiesCard {data} />
+                {/each}
             </div>
             <div class="col-md-5 d-none d-md-block">
                 <div class="character-nft">
@@ -55,7 +85,6 @@
     }
 
     .section-ribon {
-
         img {
             width: 100%;
         }

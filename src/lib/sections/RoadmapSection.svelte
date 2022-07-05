@@ -7,14 +7,26 @@
         {
             shadow: false,
             outline: false,
+            title: "Phase 1",
+            desc: `<div class="text-xl-start">&#9899; DeFi Ecosystem <span class="small">(Almost complete)</span> <br/>
+                &#9899; trading community on Cronos <br/>
+                &#9899; Crazy Scientist NFT collection sold out <br/>
+                &#9899; LAB token presale & launch <br/>
+                &#9899; Lab DEX V1 deployed <br/> 
+                &#9899; NFT Staking<br/> 
+                &#9899; LAB token staking <div>`,
         },
         {
             shadow: true,
             outline: false,
+            title: "Phase 2",
+            desc: `Lab Pad <br/> CERN Laboratory - Gamified DeFi`,
         },
         {
             shadow: false,
             outline: true,
+            title: "Phase 3",
+            desc: `Labverse <br/> CERN V2`,
         },
     ];
 </script>
@@ -25,7 +37,7 @@
     </div>
 
     <div class="roadmap-content-wrapper p-5">
-        <div class="row row-cols-1 row-cols-md-3 g-5">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center g-5">
             {#each card_conf as conf}
                 <div class="col">
                     <RoadMapCard {conf} />
@@ -78,10 +90,10 @@
             & > .button-content {
                 position: absolute;
                 top: 2vw;
-                left:0%;
+                left: 0%;
                 color: $white;
                 padding: 2rem 4rem;
-                width:100%;
+                width: 100%;
                 @include media-breakpoint-down(sm) {
                     padding: 10px;
                     text-align: center;

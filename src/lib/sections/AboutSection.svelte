@@ -14,14 +14,14 @@
     </div>
 
     <div class="details-wrapper text-white">
-        <div class="col-lg-10 mx-auto py-5">
-            <div class="row w-100 align-items-center ">
-                <div class="col-lg-6 ">
+        <div class="col-xl-10 mx-auto py-5">
+            <div class="row m-0 w-100 align-items-center  justify-content-center">
+                <div class="col-lg-7 col-md-6">
                     <h1 class="left-title">
                         <span class="text-green">How</span> <br /> <span class="text-green">cronos</span> <br /> <span class="text-green">chain</span> <br /> got <br /> captured?
                     </h1>
                 </div>
-                <div class="col-lg-5 right-side">
+                <div class="col-lg-5 col-md-6 col-12 right-side">
                     <h4 class="text-green">How to get started?</h4>
                     <p class="poppins fs-5 fw-light">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, hic. Omnis in maiores, tempore facilis, modi aperiam porro illum, expedita voluptate corrupti repellat
@@ -76,7 +76,7 @@
                 font-size: clamp(40px, 5vw, 94px);
                 line-height: 66px;
 
-                @include media-breakpoint-down(sm) {
+                @include media-breakpoint-down(md) {
                     line-height: 44px;
                     margin-bottom: 4rem;
                     text-align: center;
@@ -85,7 +85,7 @@
 
             .right-side {
                 padding: 2rem;
-                @include media-breakpoint-down(sm) {
+                @include media-breakpoint-down(md) {
                     text-align: center;
                 }
             }

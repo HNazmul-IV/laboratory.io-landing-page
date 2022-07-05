@@ -1,5 +1,6 @@
 <script lang="ts">
     import CARD_LEFT_IMAGE from "../../assets/utilities-card-image.png";
+    export let data: { title: string; desc: string } = { title: "", desc: "" };
 </script>
 
 <div class="utilities-card ">
@@ -8,8 +9,8 @@
             <img class="" src={CARD_LEFT_IMAGE} alt="" />
         </div>
         <div class="details">
-            <h2 class="text-white">Utilies</h2>
-            <p class="text-green">NFT collection packed with utilities NFT collection packed with utilities</p>
+            <h2 class="text-white">{data.title}</h2>
+            <p class="text-green">{@html data.desc}</p>
         </div>
     </div>
 </div>
@@ -18,7 +19,11 @@
     .utilities-card {
         width: 100%;
         max-width: 800px;
-        padding:10px 10px;
+        padding: 10px 10px;
+
+        @include media-breakpoint-up(xxl) {
+            max-width: 1050px;
+        }
         .image {
             max-width: 185px;
             width: 28%;
@@ -35,10 +40,9 @@
             }
         }
         & > p {
-            line-height: #{clamp(14px,2vw,50px)};
+            line-height: #{clamp(14px, 2vw, 50px)};
             font-size: #{clamp(12px, 1.4vw, 24px)};
             font-weight: normal;
-
         }
     }
 </style>

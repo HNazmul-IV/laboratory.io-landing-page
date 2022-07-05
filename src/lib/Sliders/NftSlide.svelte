@@ -1,22 +1,55 @@
 <script lang="ts">
-    import NftsScroller from "../Animate/Nfts_Scroller.svelte";
-    import { diretionsEnum } from "../Animate/Nfts_Scroller.svelte";
+    import { onDestroy, onMount } from "svelte";
 
     import NftCard from "./../Cards/NftCard.svelte";
     export let imageTranslate: number = 0;
-    export let images: string[] = [];
-    export let direction: diretionsEnum = diretionsEnum.ltr;
+    export let direction: string;
+
+    let images: string[] = ["98.webp"];
+    let makingElementInterval: number;
+
+    let card = (image: string): string => ` <div class="card-wrapper ${direction}"><img src=${image} class="_card-image" alt="" /></div>`;
+    let container: HTMLDivElement;
+    let duration = 18000;
+
+    const elementInAndOut = () => {
+        makingElementInterval = window.setInterval(() => {
+            const div = document.createElement("div");
+            div.className = `nft-card ${direction}`;
+            div.innerHTML = card("98.webp");
+            console.log(container);
+            container.appendChild(div);
+            setTimeout(() => {
+                div.remove();
+            }, duration);
+        }, duration / 7.9);
+
+        setTimeout(() => {
+            document.querySelectorAll(".nft-card.default").forEach((elem) => elem.remove());
+        }, duration * 0.9);
+    };
+    elementInAndOut()
+
+    onMount(() => {
+    });
 </script>
 
-<div class="slider">
+<div nft-slider class="slider ">
     <div class="slider-wrapper">
-        <NftsScroller {direction}>
-            <div class="card-holder" style="transform: rotate(-3.4deg) translateX(-{imageTranslate || '50'}px);">
-                {#each images as image}
-                    <NftCard {image} />
-                {/each}
+        <div>
+            <div class="card-holder" bind:this={container} style="transform: rotate(-3.4deg) translateX(-{imageTranslate || '50'}px); --animation-timing:{duration}ms">
+                <!--Slide Element Will be Apend Here -->
+                <div class="nft-card {direction} default one">
+                    <div class="card-wrapper "><img src="98.webp" class="_card-image" alt="" /></div>
+                </div>
+                <div class="nft-card {direction} default two">
+                    <div class="card-wrapper "><img src="98.webp" class="_card-image" alt="" /></div>
+                </div>
+                <div class="nft-card {direction} default three">
+                    <div class="card-wrapper "><img src="98.webp" class="_card-image" alt="" /></div>
+                </div>
             </div>
-        </NftsScroller>
+        </div>
     </div>
 </div>
 
@@ -24,10 +57,12 @@
     .slider {
         width: 100%;
         --card-width-width-gap: 24.2vw;
-        --card-amount: 10;
+        --card-amount: 6;
         --gap: 20px;
+        --animation-timing: 20s;
         height: 31.6vw;
         overflow: hidden;
+        padding: 3vw 0px;
         @include media-breakpoint-down(md) {
             --gap: 10px;
             height: 33.6vw;

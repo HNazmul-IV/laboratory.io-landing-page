@@ -5,14 +5,13 @@
     import PROD_LOGO from "../../assets/logo-dark-prod.svg";
     import NftSlide from "../Sliders/NftSlide.svelte";
     import { onMount } from "svelte";
-    import { diretionsEnum } from "../Animate/Nfts_Scroller.svelte";
 
     let slideOneImage = [];
     let slideTwoImage = [];
 
     onMount(() => {
         let n = 100;
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 6; i++) {
             slideOneImage = [...slideOneImage, `98.webp`];
             slideTwoImage = [...slideTwoImage, `98.webp`];
         }
@@ -25,14 +24,20 @@
             <img src={HEADER_RIBON} alt="" />
         </div>
         <div class="slide-one">
-            <NftSlide direction={diretionsEnum.ltr} images={slideOneImage} />
+            <NftSlide direction={"ltr"} />
         </div>
         <div class="slide-two">
-            <NftSlide images={slideTwoImage} imageTranslate={150} />
+            <NftSlide direction={"rtl"} imageTranslate={150} />
         </div>
         <div class="nft-slide-text">
-            <h1 class={"text-green prime"}>Play to earn with NFT collection on cronos.</h1>
-            <h3 class="text-light second">NFT collection packed with utilities. NFT collection packed with utilities.</h3>
+            <div class="d-flex">
+                <h1 class={"text-green prime"}>Play to earn with NFT collection on cronos.&nbsp;&nbsp;&nbsp;</h1>
+                <h1 class={"text-green prime"}>Play to earn with NFT collection on cronos.&nbsp;&nbsp;&nbsp;</h1>
+            </div>
+            <div class="d-flex" style="">
+                <h3 class="text-light second">NFT collection packed with utilities. NFT collection packed with utilities.&nbsp;&nbsp;&nbsp;</h3>
+                <h3 class="text-light second">NFT collection packed with utilities. NFT collection packed with utilities.&nbsp;&nbsp;&nbsp;</h3>
+            </div>
         </div>
     </div>
 
@@ -89,10 +94,16 @@
                 }
                 font-size: 16px;
                 .prime {
-                    font-size: clamp(2.3em, 11vw, 4em);
+                    font-size: clamp(2.3em, 6vw, 5em);
+                    animation: moving-text 20s linear infinite;
+                    --minus-move: calc(-100%);
                 }
                 .second {
                     font-weight: normal;
+                    font-size: clamp(1.3em, 4vw, 2.5em);
+                    animation: moving-text 30s linear 0s infinite;
+                    --minus-move: calc(-100%);
+                    
                 }
             }
         }
@@ -160,6 +171,18 @@
                     }
                 }
             }
+        }
+    }
+
+    @keyframes moving-text {
+        from {
+            transform: translateX(0%);
+            will-change: transform;
+        }
+
+        to {
+            transform: translateX(var(--minus-move));
+            will-change: transform;
         }
     }
 </style>

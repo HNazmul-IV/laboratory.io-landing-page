@@ -44,7 +44,93 @@ body {
   }
 }
 
+.nft-card {
+  width: calc(var(--card-width-width-gap) - var(--gap));
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  position: absolute;
+  will-change: transform;
 
+
+
+  &.ltr {
+    left: -18%;
+    animation: moving-ltr var(--animation-timing) linear infinite;
+  }
+
+  &.rtl {
+    right: -18%;
+    animation: moving-rtl var(--animation-timing) linear infinite;
+  }
+
+  &.default {
+
+    &.ltr {
+
+
+      &.one {
+        left: -19%;
+      }
+
+      &.two {
+        left: -1.5%;
+      }
+
+      &.three {
+        left: 16%;
+      }
+    }
+
+    &.rtl {
+      &.one {
+        right: -18%;
+      }
+
+      &.two {
+        right: -0%;
+      }
+
+      &.three {
+        right: 18%;
+      }
+    }
+
+  }
+
+  // @include media-breakpoint-down(sm) {
+  //   width: calc(var(--card-width-width-gap));
+  // }
+
+  .card-wrapper {
+    width: 100%;
+
+    &>img {
+      border-radius: 5px;
+      width: 100%;
+    }
+  }
+}
+
+@keyframes moving-ltr {
+  from {
+    transform: translateX(-0vw);
+  }
+
+  to {
+    transform: translateX(200vw);
+  }
+}
+
+@keyframes moving-rtl {
+  from {
+    transform: translateX(-0vw);
+  }
+
+  to {
+    transform: translateX(-200vw);
+  }
+}
 
 
 
