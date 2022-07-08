@@ -3,7 +3,7 @@
     import NFT_SLIDE_1 from "../../assets/nft-slide-one.png";
     import NFT_SLIDE_2 from "../../assets/nft-slide-two.png";
     import PROD_LOGO from "../../assets/logo-dark-prod.svg";
-    import NftSlide from "../Sliders/NftSlide.svelte";
+    import NftSlideLTR from "../Sliders/NftSlideLTR.svelte";
     import { onMount } from "svelte";
 
     let slideOneImage = [];
@@ -24,10 +24,10 @@
             <img src={HEADER_RIBON} alt="" />
         </div>
         <div class="slide-one">
-            <NftSlide direction={"ltr"} />
+            <NftSlideLTR />
         </div>
         <div class="slide-two">
-            <NftSlide direction={"rtl"}  />
+            <NftSlideLTR />
         </div>
         <div class="nft-slide-text">
             <div class="d-flex">
@@ -77,13 +77,13 @@
                     width: 100%;
                 }
             }
-            .slide-one,
-            .slide-two {
-                margin-top: -7%;
+            .slide-one{
+                margin-top: -2%;
+                margin-bottom: 2%;
             }
             .nft-slide-text {
                 transform: rotate(-3.4deg);
-                margin-top: -3vw;
+                // margin-top: -3vw;
                 overflow-x: hidden;
 
                 @include media-breakpoint-down(sm) {
@@ -103,7 +103,6 @@
                     font-size: clamp(1.3em, 4vw, 2.5em);
                     animation: moving-text 30s linear 0s infinite;
                     --minus-move: calc(-100%);
-                    
                 }
             }
         }
