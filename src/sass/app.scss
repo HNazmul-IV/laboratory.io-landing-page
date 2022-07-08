@@ -56,43 +56,55 @@ body {
 
   &.ltr {
     left: -18%;
-    animation: moving-ltr var(--animation-timing) linear infinite;
+    animation: moving-ltr var(--animation-timing) linear;
+    animation-fill-mode: forwards;
   }
 
   &.rtl {
     right: -18%;
-    animation: moving-rtl var(--animation-timing) linear infinite;
+    animation: moving-rtl var(--animation-timing) linear;
+    animation-fill-mode: forwards;
   }
 
   &.default {
 
     &.ltr {
-
-
-      &.one {
+      &.c1 {
         left: -19%;
       }
 
-      &.two {
+      &.c2 {
         left: -1.5%;
       }
 
-      &.three {
+      &.c3 {
         left: 16%;
+      }
+
+      &.c4 {
+        left: 33.5%;
       }
     }
 
     &.rtl {
-      &.one {
+      &.c1 {
         right: -18%;
       }
 
-      &.two {
+      &.c2 {
         right: -0%;
       }
 
-      &.three {
+      &.c3 {
         right: 18%;
+      }
+
+      &.c4 {
+        right: 36%;
+      }
+
+      &.c5 {
+        right: 54%;
       }
     }
 

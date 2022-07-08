@@ -1,5 +1,6 @@
 <script lang="ts">
     import { onDestroy, onMount } from "svelte";
+    import { detach } from "svelte/internal";
 
     import NftCard from "./../Cards/NftCard.svelte";
     export let imageTranslate: number = 0;
@@ -7,30 +8,57 @@
 
     let images: string[] = ["98.webp"];
     let makingElementInterval: number;
+    let newDiveRemoverTimeout: number;
+    let defaultElementRemoveTimeout: number;
 
     let card = (image: string): string => ` <div class="card-wrapper ${direction}"><img src=${image} class="_card-image" alt="" /></div>`;
     let container: HTMLDivElement;
-    let duration = 18000;
+    let duration = 20000;
 
-    const elementInAndOut = () => {
-        makingElementInterval = window.setInterval(() => {
-            const div = document.createElement("div");
-            div.className = `nft-card ${direction}`;
-            div.innerHTML = card("98.webp");
-            console.log(container);
-            container.appendChild(div);
-            setTimeout(() => {
-                div.remove();
-            }, duration);
-        }, duration / 7.9);
+    const removeAfterAnimation = (elm: HTMLElement) =>
+        elm.addEventListener("animationend", function () {
+            if (elm !== null) {
+                elm?.remove?.();
+            }
+        });
 
-        setTimeout(() => {
-            document.querySelectorAll(".nft-card.default").forEach((elem) => elem.remove());
-        }, duration * 0.9);
+    const toggleAnimationState = () => {
+        document.addEventListener("visibilitychange", function () {
+            const all = document.querySelectorAll<HTMLDivElement>(".nft-card");
+            console.log({ state: document.visibilityState });
+            all.forEach((elem) => {
+                if (document.visibilityState === "hidden") {
+                    elem.style.animationPlayState = "paused";
+                } else {
+                    elem.style.animationPlayState = null;
+                }
+            });
+        });
     };
-    elementInAndOut()
+
+    const creatingCard = (timstamp: number) => {
+        const div = document.createElement("div");
+        div.className = "nft-card " + direction;
+        div.innerHTML = card("98.webp");
+        console.log(timstamp);
+        removeAfterAnimation(div);
+        if (container !== null) {
+            container.appendChild(div);
+        }
+        setTimeout(() => {
+            requestAnimationFrame(creatingCard);
+        }, duration / 7.9);
+    };
+
+    const elementRemove = function () {
+        const all = document.querySelectorAll<HTMLDivElement>(".nft-card");
+        all.forEach((elm) => removeAfterAnimation(elm));
+    };
 
     onMount(() => {
+        requestAnimationFrame(creatingCard);
+        elementRemove();
+        toggleAnimationState();
     });
 </script>
 
@@ -39,15 +67,11 @@
         <div>
             <div class="card-holder" bind:this={container} style="transform: rotate(-3.4deg) translateX(-{imageTranslate || '50'}px); --animation-timing:{duration}ms">
                 <!--Slide Element Will be Apend Here -->
-                <div class="nft-card {direction} default one">
-                    <div class="card-wrapper "><img src="98.webp" class="_card-image" alt="" /></div>
-                </div>
-                <div class="nft-card {direction} default two">
-                    <div class="card-wrapper "><img src="98.webp" class="_card-image" alt="" /></div>
-                </div>
-                <div class="nft-card {direction} default three">
-                    <div class="card-wrapper "><img src="98.webp" class="_card-image" alt="" /></div>
-                </div>
+                {#each [...new Array(5)] as deta, idx}
+                    <div class="nft-card {direction} default c{idx + 1}">
+                        {@html card("98.webp")}
+                    </div>
+                {/each}
             </div>
         </div>
     </div>

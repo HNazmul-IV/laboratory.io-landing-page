@@ -27,7 +27,7 @@
             <NftSlide direction={"ltr"} />
         </div>
         <div class="slide-two">
-            <NftSlide direction={"rtl"} imageTranslate={150} />
+            <NftSlide direction={"rtl"}  />
         </div>
         <div class="nft-slide-text">
             <div class="d-flex">
