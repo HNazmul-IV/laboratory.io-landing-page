@@ -24,10 +24,10 @@
             <img src={HEADER_RIBON} alt="" />
         </div>
         <div class="slide-one">
-            <NftSlideLTR />
+            <NftSlideLTR directions="rtl"/>
         </div>
         <div class="slide-two">
-            <NftSlideLTR />
+            <NftSlideLTR directions="ltr" />
         </div>
         <div class="nft-slide-text">
             <div class="d-flex">
