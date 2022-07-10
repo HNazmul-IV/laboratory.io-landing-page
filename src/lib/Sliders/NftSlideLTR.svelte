@@ -2,7 +2,7 @@
     import { onMount } from "svelte";
     import NftCard from "../Cards/NftCard.svelte";
 
-    const card = (right: number) => ` <div class="nft-card" style="--right:${right}%"><div class="card-wrapper"><img src="" alt="" /></div></div>`;
+    export let directions: "ltr" | "rtl" = "rtl";
 
     let nftSliderArea: HTMLDivElement;
 
@@ -10,18 +10,30 @@
         const allbox = nftSliderArea.querySelectorAll(".nft-card_slide_container");
         allbox.forEach((elem: HTMLDivElement) => {
             let translate = 0;
-            const animate = () => {
-                const { right: parentRightPosition }: DOMRect = nftSliderArea.getBoundingClientRect();
-                const { right: elemenRightPosition }: DOMRect = elem.getBoundingClientRect();
+            let speed = 0.1;
+            const { right: elemenRightPosition,left:elementLeftPosition }: DOMRect = elem.getBoundingClientRect();
+            const { right: parentRightPosition,left:parentLeftPosition }: DOMRect = nftSliderArea.getBoundingClientRect();
 
-                translate = translate + 0.3;
-                elem.style.transform = `translateX(${translate}vw)`;
-                if (elemenRightPosition > parentRightPosition + elem.clientWidth + (2 * window.innerWidth) / 100) {
-                    translate = 0;
-                    elem.style.right = "100vw";
+            //animate function for both LTR and RTL
+            const animate = () => {
+                if (directions === "ltr") {
+                    translate = translate + speed;
+                    elem.style.transform = `translateX(${translate}vw)`;
+                    if (elemenRightPosition > parentRightPosition + elem.clientWidth + (2 * window.innerWidth) / 100) {
+                        translate = 0;
+                        elem.style.right = "100vw";
+                    }
+                } else if (directions === "rtl") {
+                    translate = translate - speed;
+                    elem.style.transform = `translateX(${translate}vw)`;
+                    if (elementLeftPosition < parentLeftPosition - elem.clientWidth - (2 * window.innerWidth) / 100) {
+                        translate = 0;
+                        elem.style.left = "100vw";
+                    }
                 }
                 requestAnimationFrame(animate);
             };
+
             requestAnimationFrame(animate);
         });
     };
