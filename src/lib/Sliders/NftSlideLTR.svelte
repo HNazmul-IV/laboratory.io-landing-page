@@ -11,11 +11,11 @@
         allbox.forEach((elem: HTMLDivElement) => {
             let translate = 0;
             let speed = 0.1;
-            const { right: elemenRightPosition,left:elementLeftPosition }: DOMRect = elem.getBoundingClientRect();
-            const { right: parentRightPosition,left:parentLeftPosition }: DOMRect = nftSliderArea.getBoundingClientRect();
 
             //animate function for both LTR and RTL
             const animate = () => {
+                const { right: elemenRightPosition, left: elementLeftPosition }: DOMRect = elem.getBoundingClientRect();
+                const { right: parentRightPosition, left: parentLeftPosition }: DOMRect = nftSliderArea.getBoundingClientRect();
                 if (directions === "ltr") {
                     translate = translate + speed;
                     elem.style.transform = `translateX(${translate}vw)`;
