@@ -6,6 +6,20 @@
 
     let nftSliderArea: HTMLDivElement;
 
+    const addRandomImg = () => {
+        let limit = 300;
+        let base_url = "cs-images";
+        return `${base_url}/${Math.ceil(Math.random() * limit - 1)}.png`;
+    };
+
+    const addImgToAllElement = (elm: HTMLDivElement) => {
+        const allImg = elm.querySelectorAll("img._card-image");
+        allImg.forEach((img: HTMLImageElement) => {
+            img.src = "";
+            img.src = addRandomImg();
+        });
+    };
+
     const movingElement = () => {
         const allbox = nftSliderArea.querySelectorAll(".nft-card_slide_container");
         allbox.forEach((elem: HTMLDivElement) => {
@@ -22,6 +36,7 @@
                     if (elemenRightPosition > parentRightPosition + elem.clientWidth + (2 * window.innerWidth) / 100) {
                         translate = 0;
                         elem.style.right = "100vw";
+                        addImgToAllElement(elem);
                     }
                 } else if (directions === "rtl") {
                     translate = translate - speed;
@@ -29,6 +44,7 @@
                     if (elementLeftPosition < parentLeftPosition - elem.clientWidth - (2 * window.innerWidth) / 100) {
                         translate = 0;
                         elem.style.left = "100vw";
+                        addImgToAllElement(elem);
                     }
                 }
                 requestAnimationFrame(animate);
@@ -44,16 +60,16 @@
 <div class="nft-slider " bind:this={nftSliderArea}>
     <div class="nft-slider__wrapper">
         <div class="nft-card_slide_container" style="--right:100vw">
-            <NftCard image="98.webp" />
-            <NftCard image="98.webp" />
-            <NftCard image="98.webp" />
-            <NftCard image="98.webp" />
+            <NftCard image="/cs-images/3.png" />
+            <NftCard image="/cs-images/9.png" />
+            <NftCard image="/cs-images/15.png" />
+            <NftCard image="/cs-images/20.png" />
         </div>
         <div class="nft-card_slide_container" style="--right:0vw">
-            <NftCard image="98.webp" />
-            <NftCard image="98.webp" />
-            <NftCard image="98.webp" />
-            <NftCard image="98.webp" />
+            <NftCard image="cs-images/14.png" />
+            <NftCard image="cs-images/55.png" />
+            <NftCard image="cs-images/40.png" />
+            <NftCard image="cs-images/56.png" />
         </div>
     </div>
 </div>
