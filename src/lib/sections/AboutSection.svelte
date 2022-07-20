@@ -6,28 +6,29 @@
 <section id="about">
     <div class="video-wrapper">
         <div class="video">
-            <img src={VIDEO_PL} alt="" srcset="" />
+            <img src="{VIDEO_PL}" alt="" srcset="" />
         </div>
         <div class="play-button">
-            <img src={PLAY_BUTTON} alt="" />
+            <img src="{PLAY_BUTTON}" alt="" />
         </div>
     </div>
 
     <div class="details-wrapper text-white">
-        <div class="col-xl-10 mx-auto py-5">
-            <div class="row m-0 w-100 align-items-center  justify-content-center">
-                <div class="col-lg-7 col-md-6">
-                    <h1 class="left-title">
-                        <span class="text-green">How</span> <br /> <span class="text-green">cronos</span> <br /> <span class="text-green">chain</span> <br /> got <br /> captured?
-                    </h1>
-                </div>
-                <div class="col-lg-5 col-md-6 col-12 right-side">
-                    <h4 class="text-green">How to get started?</h4>
-                    <p class="poppins fs-5 fw-light">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, hic. Omnis in maiores, tempore facilis, modi aperiam porro illum, expedita voluptate corrupti repellat
-                        voluptates necessitatibus quos quaerat sed odit totam.
+        <div class="wrapper text-center">
+            <div class="py-5">
+                <h1 class="title">
+                    <span class="text-green">The Crazy </span><span class="text-green">Scientist </span><br /> <span class="small">back Story</span>
+                </h1>
+                <div class="p-2 p-lg-5 px-xxl-0 col-xxl-10 mx-auto">
+                    <p class="poppins fs-xl-4 mb-4 fw-light">
+                        Far out in the uncharted areas of the universe lies The Blockchain solar system which consists of 8 known planets and all orbiting the center, Bitcoin a golden magnificent star
+                        that provides sanctity to its neighboring planets.
                     </p>
-                    <p class="poppins fs-5 fw-light">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, dignissimos.</p>
+                    <p class="poppins fs-xl-4 fw-light">
+                        The 3rd planet from the center is Cronos, a deep sapphire blue colored planet and populated by varying humanoid species, collectively known as #CROFam. Cronos is a relatively
+                        young planet and the birthplace of a life form, Crazy Scientists. Not much is known about the background of the Crazy Scientists other than they have been around since
+                        inception and surfaced relatively late from the underground Laboratories.
+                    </p>
                 </div>
             </div>
         </div>
@@ -72,15 +73,23 @@
         }
 
         .details-wrapper {
-            .left-title {
+            .title {
                 font-size: clamp(40px, 5vw, 94px);
-                line-height: 66px;
+                line-height: 1;
+                letter-spacing: 0.05em;
+
+                .small {
+                    font-size: clamp(30px, 4vw, 64px);
+                }
 
                 @include media-breakpoint-down(md) {
                     line-height: 44px;
                     margin-bottom: 4rem;
                     text-align: center;
                 }
+            }
+            .fs-xl-4{
+                font-size: clamp(18px , 2vw, 26px)
             }
 
             .right-side {

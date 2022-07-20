@@ -3,30 +3,44 @@
     import UNDER_CONTENT_BG from "../../assets/roadmap-under-background.png";
     import DISCORD_ICON from "../../assets/discord-icon.png";
 
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-circle-fill me-2" viewBox="0 0 16 16">
+                    <circle cx="8" cy="8" r="8"/>
+                </svg>`;
+
     const card_conf = [
         {
             shadow: false,
             outline: false,
             title: "Phase 1",
-            desc: `<div class="text-xl-start">&#9899; DeFi Ecosystem <span class="small">(Almost complete)</span> <br/>
-                &#9899; trading community on Cronos <br/>
-                &#9899; Crazy Scientist NFT collection sold out <br/>
-                &#9899; LAB token presale & launch <br/>
-                &#9899; Lab DEX V1 deployed <br/> 
-                &#9899; NFT Staking<br/> 
-                &#9899; LAB token staking <div>`,
+            desc: `<ul class="text-start roadmap-card-list">
+                        <li>DeFi Ecosystem</li>
+                        <li>trading community on Cronos</li>
+                        <li>Crazy Scientist NFT collection sold out</li>
+                        <li>LAB token presale & launch</li>
+                        <li>Lab DEX V1 deployed</li>
+                        <li>NFT Staking</li>
+                        <li>LAB token staking</li>
+                    <ul>`,
         },
         {
             shadow: true,
             outline: false,
             title: "Phase 2",
-            desc: `Lab Pad <br/> CERN Laboratory - Gamified DeFi`,
+            desc: `<ul class="text-start roadmap-card-list">
+                        <li>Lab Pad</li>
+                        <li>CERN Laboratory</li>
+                        <li>Compound X & Y</li>
+                    <ul>`,
         },
         {
             shadow: false,
             outline: true,
             title: "Phase 3",
-            desc: `Labverse <br/> CERN V2`,
+            desc: `<ul class="text-start roadmap-card-list green">
+                        <li>Labverse</li>
+                        <li>CERN V2</li>
+                        <li>Smart Contract Services</li>
+                    <ul>`,
         },
     ];
 </script>
@@ -40,7 +54,7 @@
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center g-5">
             {#each card_conf as conf}
                 <div class="col">
-                    <RoadMapCard {conf} />
+                    <RoadMapCard conf="{conf}" />
                 </div>
             {/each}
         </div>
@@ -48,13 +62,13 @@
 
     <div class="roadmap-under-content">
         <div class="background">
-            <img src={UNDER_CONTENT_BG} alt="" />
+            <img src="{UNDER_CONTENT_BG}" alt="" />
         </div>
         <div class="button-content">
             <div class="wrapper">
-                <h1>Lets be crazy togather.</h1>
+                <h1>Let's be crazy together</h1>
                 <a href="/" class="btn">
-                    <img src={DISCORD_ICON} alt="" />
+                    <img src="{DISCORD_ICON}" alt="" />
                     Join Discord
                 </a>
             </div>
@@ -67,7 +81,7 @@
         background: url("../../assets/black-green-texture.png") no-repeat center / cover;
         & > .title {
             & > h1 {
-                font-size: clamp(50px, 8vw, 154px);
+                font-size: clamp(40px, 8vw, 154px);
                 padding: clamp(10px, 4vw, 30px);
                 color: white;
                 font-weight: 500;
@@ -92,14 +106,14 @@
                 top: 2vw;
                 left: 0%;
                 color: $white;
-                padding: 2rem 4rem;
+                padding: 2rem #{clamp(4rem, 6vw, 7rem)};
                 width: 100%;
                 @include media-breakpoint-down(sm) {
                     padding: 10px;
                     text-align: center;
                 }
                 & > .wrapper {
-                    width: clamp(300px, 45vw, 820px);
+                    width: clamp(340px, 45vw, 820px);
                     & > h1 {
                         font-size: clamp(1rem, 7vw, 80px);
                     }
@@ -113,7 +127,7 @@
                         font-size: 32px;
                         border-radius: 20px;
                         margin-top: 2rem;
-                        @include media-breakpoint-down(sm) {
+                        @include media-breakpoint-down(md) {
                             padding: 0.3rem 1em;
                             font-size: 20px;
                             border-radius: 10px;

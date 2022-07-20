@@ -25,9 +25,16 @@ $grid-breakpoints: (
   font-family: 'Poppins', sans-serif;
 }
 
+
+html {
+  scroll-padding-top: 40px;
+}
+
 body {
   background-color: black;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .text-green {
@@ -45,7 +52,31 @@ body {
 }
 
 
+.roadmap-card-list {
+  padding-left: 12% !important;
 
+
+  li {
+    list-style: none;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      width: 22px;
+      height: 22px;
+      background: url(/circle-fill.svg);
+      background-size: contain;
+      position: absolute;
+      left: -9%;
+      top: 5px;
+    }
+  }
+
+  &.green li::before {
+    background-image: url(/circle-fill-green.svg) !important;
+  }
+}
 
 
 

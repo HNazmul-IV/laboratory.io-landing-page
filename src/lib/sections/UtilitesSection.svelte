@@ -6,22 +6,22 @@
     const utilities_data = [
         {
             title: "Lab DEX",
-            desc: "The preferred DEX on Cronos and the cheapest",
+            desc: "Trade your favourite cryptocurrencies with the lowest transaction fees than any other DEX",
         },
         {
-            title: "Lab Growth chambers",
+            title: "Lab Growth Chambers",
             desc: "DeFi, Stake, grow, experiment with our NFTs and LAB token",
         },
         {
             title: "CERN",
-            desc: "The Head of Laboratory has experiments for our community and unique token and NFT rewards Lab Pad <br> Launch your NFT or token and be empowered by the Laboratory community",
+            desc: "The Head of Laboratory has experiments for our community and unique token and NFT rewards Lab Pad. Launch your NFT or token and be empowered by the Laboratory community",
         },
         {
             title: "Community",
             desc: "Since Nov 2021, Laboratory community have worked together to buy the best performing Cronos assets",
         },
         {
-            title: "Smart contract services",
+            title: "Smart Contract Services",
             desc: "Want to up your NFT project utility with customized/ adventure like DeFi? We provide unique smart contracts and team building services.",
         },
         {
@@ -29,8 +29,8 @@
             desc: "Coming Soon",
         },
         {
-            title: "Play 2earn",
-            desc: "Labverse will consist of mini games that will provide opportunities for the Laboratory community to win and earn. The value of Labverse will be interlinked with Lab’s gamified DeFi.",
+            title: "Lab Pad",
+            desc: "Launch your NFT or token and be empowered by the Laboratory community",
         },
     ];
 </script>
@@ -42,19 +42,19 @@
 
     <div class="utilities-wrapper">
         <div class="row">
-            <div class="col-md-6 offset-md-1">
+            <div class="col-md-7 col-xxl-6 offset-xxl-1 utilities-card-wrapper">
                 {#each utilities_data as data}
-                    <UtilitiesCard {data} />
+                    <UtilitiesCard data="{data}" />
                 {/each}
             </div>
             <div class="col-md-5 d-none d-md-block">
                 <div class="character-nft">
-                    <img src={CHARACTER_NFT} alt="" />
+                    <img src="{CHARACTER_NFT}" alt="" />
                 </div>
             </div>
         </div>
         <div class="section-ribon">
-            <img src={RIBON_IMG} alt="" />
+            <img src="{RIBON_IMG}" alt="" />
         </div>
     </div>
 </section>
@@ -65,10 +65,15 @@
         overflow-x: hidden;
     }
     section > .title h1 {
-        font-size: clamp(62px, 8vw, 154px);
+        font-size: clamp(45px, 8vw, 154px);
         padding: clamp(10px, 4vw, 30px);
         color: white;
         font-weight: 500;
+    }
+    .utilities-card-wrapper {
+        @include media-breakpoint-up(xxl) {
+            transform: translateX(4vw);
+        }
     }
     .character-nft {
         width: 40vw;

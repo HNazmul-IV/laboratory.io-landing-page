@@ -5,27 +5,28 @@
     import CRAZY_TEXT from "../../assets/creazy-text.png";
     import CHAIN_TEXT from "../../assets/chain-text.png";
     import HEADER_RIBON from "../../assets/header-ribon.png";
-    import ShaderVideo from './ShaderVideo.svelte'
+    import McAnimation from "./McAnimation.svelte";
 </script>
 
 <header id="top">
     <div class="header-wrapper">
-       <img class="header-smoke" src={HEADER_SMOKE} alt="background" />
-	<!-- <ShaderVideo/> -->
+        <!-- <img class="header-smoke" src="{HEADER_SMOKE}" alt="background" /> -->
+        <McAnimation />
+        <!-- <ShaderVideo/> -->
         <div class="nft">
-            <img src={HEADER_NFT_IMG} alt="" />
+            <img src="{HEADER_NFT_IMG}" alt="" />
         </div>
         <div class="cros">
-            <img src={HEADER_CROS_IMG} alt="" />
+            <img src="{HEADER_CROS_IMG}" alt="" />
         </div>
         <div class="creazy-text header-text">
-            <img src={CRAZY_TEXT} alt="" />
+            <img src="{CRAZY_TEXT}" alt="" />
         </div>
         <div class="chain-text header-text ">
-            <img src={CHAIN_TEXT} alt="" />
+            <img src="{CHAIN_TEXT}" alt="" />
         </div>
         <div class="header-ribon">
-            <img src={HEADER_RIBON} alt="" />
+            <img src="{HEADER_RIBON}" alt="" />
         </div>
     </div>
 </header>
@@ -33,7 +34,10 @@
 <style lang="scss">
     header {
         width: 100%;
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(lg) {
+            padding-top: 2rem;
+        }
+        @include media-breakpoint-down(md) {
             padding-top: 3rem;
         }
     }
@@ -42,6 +46,12 @@
         width: 100%;
         position: relative;
         z-index: 2;
+        .nft,
+        .cros,
+        .creazy-text,
+        .chain-text {
+            pointer-events: none;
+        }
 
         .header-smoke {
             width: 100%;
@@ -55,15 +65,14 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -55%);
-            width: 30vw;
+            width: 35vw;
         }
         .nft > img {
             transform: translate(-54%, -60%);
-
         }
 
         .cros > img {
-            width: 45vw;
+            width: 50vw;
             z-index: 1;
         }
 
@@ -81,7 +90,7 @@
             right: 11%;
         }
         .creazy-text {
-            left: 10%;
+            left: 9%;
         }
         .header-ribon {
             width: 100%;

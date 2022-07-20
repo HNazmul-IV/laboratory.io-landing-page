@@ -67,7 +67,7 @@
                     <a class="nav-link" href={"#nfts"}>NFT&nbsp;Collections</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href={"#p2e"}>Pay2Earn</a>
+                    <a class="nav-link" href={"#p2e"}>Play&nbsp;&amp;&nbsp;Earn</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href={"#lab"}>$LAB</a>
