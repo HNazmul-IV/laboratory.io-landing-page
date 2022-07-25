@@ -6,16 +6,25 @@
     import NftSlideLTR from "../Sliders/NftSlide.svelte";
     import { onMount } from "svelte";
 
-    let slideOneImage = [];
-    let slideTwoImage = [];
+    let crazyCard: HTMLDivElement;
+    let glowingBorder: HTMLDivElement;
+    // let upFromMiddle = 0;
+    // let downFromMiddle = 0;
+    // //Animation Crazy Card.
 
-    onMount(() => {
-        let n = 100;
-        for (let i = 0; i < 6; i++) {
-            slideOneImage = [...slideOneImage, `98.webp`];
-            slideTwoImage = [...slideTwoImage, `98.webp`];
-        }
-    });
+    // const animatingGlow = (e: Event) => {
+    //     const { top }: DOMRect = crazyCard.getBoundingClientRect();
+    //     const windowMiddlePosition = Math.floor(window.innerHeight / 2);
+    //     const windowHeightByItem = Math.floor(top + crazyCard.clientHeight / 2);
+    //     const inRange = (item: number, start: number, end: number) => item >= start && item <= end;
+    //     upFromMiddle = upFromMiddle <= 0 ? windowMiddlePosition - windowHeightByItem : 0;
+    //     downFromMiddle = upFromMiddle <= 0 ? windowHeightByItem - windowMiddlePosition : 0;
+    //     console.log({ upFromMiddle, downFromMiddle });
+    // };
+
+    // onMount(() => {
+    //     window.addEventListener("scroll", animatingGlow);
+    // });
 </script>
 
 <section id="nfts">
@@ -45,8 +54,9 @@
         <div class="container">
             <div class="row align-items-center justify-content-center">
                 <div class="col-lg-6">
-                    <div class="crazy-card text-center">
+                    <div bind:this="{crazyCard}" class="crazy-card text-center">
                         <h1><span class="text-green creazy">Crazy</span> <br /> <span class="large-text text-white">5555</span> <br /> <span class="text-green scientist">Scientists</span></h1>
+                        <div bind:this="{glowingBorder}" class="glowing-border"></div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-10 py-5 py-lg-0 px-0 ps-lg-5 text-center">
@@ -132,7 +142,7 @@
                 @include media-breakpoint-down(md) {
                     padding: 20vw 9vw;
                 }
-                &::after {
+                .glowing-border {
                     content: "";
                     position: absolute;
                     z-index: -1;

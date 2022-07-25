@@ -77,7 +77,8 @@
     .character {
         & > img {
             width: 36.5vw;
-            transform: translateX(-0.5vw);
+            max-width: 698px;
+            transform: translateX(-0.1vw);
         }
     }
     .phone-img {

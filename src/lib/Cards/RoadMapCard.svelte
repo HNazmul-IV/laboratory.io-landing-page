@@ -17,7 +17,7 @@
     <div class="card-header">
         <h3>{conf.title || "Phase 1"}</h3>
     </div>
-    <div class="card-body pt-xxl-5 p-0 col-xl-10 mx-auto">
+    <div class="card-body py-xxl-5 p-0 col-xl-10 mx-auto">
         <p>{@html conf.desc || "NFT collection packed with utilities NFT collection packed with utilities NFT collection packed with utilities NFT collection packed "}</p>
     </div>
 </article>
@@ -31,10 +31,11 @@
         border-radius: 20px;
         border: 3px solid $green;
         min-height: clamp(450px, 35vw, 678px);
-        @include media-breakpoint-up(xxl) {
-            max-height: 678px;
-            border-width: 7px;
-        }
+        height: 100%;
+        // @include media-breakpoint-up(xxl) {
+        //     max-height: 678px;
+        //     border-width: 7px;
+        // }
 
         &.pure,
         &.shadow {
@@ -60,6 +61,7 @@
         }
 
         .card-body {
+            padding: 2rem 0px;
             p {
                 font-size: clamp(1.1rem, 1.2vw, 2.2rem);
                 font-weight: 500;

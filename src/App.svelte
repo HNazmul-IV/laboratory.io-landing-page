@@ -3,21 +3,23 @@
     import AboutSection from "./lib/sections/AboutSection.svelte";
     import Footer from "./lib/sections/Footer.svelte";
     import LabSection from "./lib/sections/LabSection.svelte";
+    import LetsBeCrazySection from "./lib/sections/LetsBeCrazySection.svelte";
     import NftSections from "./lib/sections/Nft-sections.svelte";
     import Play2EarnSection from "./lib/sections/Play2EarnSection.svelte";
     import RoadmapSection from "./lib/sections/RoadmapSection.svelte";
+    import ScientistBehindSection from "./lib/sections/ScientistBehindSection.svelte";
     import TopSection from "./lib/sections/TopSection.svelte";
     import UtilitesSection from "./lib/sections/UtilitesSection.svelte";
-    const sections = [];
-    for (let i = 1; i < 10; ++i) sections.push(i);
 </script>
 
 <NavBar />
 <TopSection />
+<LetsBeCrazySection />
 <AboutSection />
 <NftSections />
 <UtilitesSection />
 <Play2EarnSection />
 <LabSection />
 <RoadmapSection />
+<ScientistBehindSection />
 <Footer />

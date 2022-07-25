@@ -2,11 +2,17 @@
     import CHARACTER_NFT from "../../assets/utilities-character.png";
     import UtilitiesCard from "../Cards/UtilitiesCard.svelte";
     import RIBON_IMG from "../../assets/utility-section-ribon.png";
+    import ICON_LAB_BOTTOL from "../../assets/icon/util-lab-bottle.png";
+    import ICON_COMMUNITY from "../../assets/icon/util-community.png";
+    import ICON_ROCKET from "../../assets/icon/util-rocket.png";
+    import ICON_LABSTORE from "../../assets/icon/lab-store.png";
+    import ICON_LABDEX from "../../assets/icon/lab-dex.png";
 
     const utilities_data = [
         {
             title: "Lab DEX",
             desc: "Trade your favourite cryptocurrencies with the lowest transaction fees than any other DEX",
+            icon: ICON_LABDEX,
         },
         {
             title: "Lab Growth Chambers",
@@ -19,18 +25,22 @@
         {
             title: "Community",
             desc: "Since Nov 2021, Laboratory community have worked together to buy the best performing Cronos assets",
+            icon: ICON_COMMUNITY,
         },
         {
             title: "Smart Contract Services",
             desc: "Want to up your NFT project utility with customized/ adventure like DeFi? We provide unique smart contracts and team building services.",
+            icon: ICON_LAB_BOTTOL,
         },
         {
             title: "Lab Store",
             desc: "Coming Soon",
+            icon: ICON_LABSTORE,
         },
         {
             title: "Lab Pad",
             desc: "Launch your NFT or token and be empowered by the Laboratory community",
+            icon: ICON_ROCKET,
         },
     ];
 </script>

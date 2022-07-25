@@ -54,7 +54,7 @@
         });
     };
 
-    onMount(movingElement);
+    // onMount(movingElement);
 </script>
 
 <div class="nft-slider " bind:this={nftSliderArea}>

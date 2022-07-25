@@ -4,14 +4,14 @@
 </script>
 
 <section id="about">
-    <div class="video-wrapper">
+    <!-- <div class="video-wrapper">
         <div class="video">
             <img src="{VIDEO_PL}" alt="" srcset="" />
         </div>
         <div class="play-button">
             <img src="{PLAY_BUTTON}" alt="" />
         </div>
-    </div>
+    </div> -->
 
     <div class="details-wrapper text-white">
         <div class="wrapper text-center">
