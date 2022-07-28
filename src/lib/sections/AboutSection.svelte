@@ -1,10 +1,11 @@
 <script lang="ts">
     import VIDEO_PL from "../../assets/video-thumbnail.png";
     import PLAY_BUTTON from "../../assets/play-button.png";
+    import ABOUT_LAB from "../../assets/about-lab.png";
 </script>
 
 <section id="about">
-    <!-- <div class="video-wrapper">
+    <!-- <div class="video-wrapper"></div>
         <div class="video">
             <img src="{VIDEO_PL}" alt="" srcset="" />
         </div>
@@ -12,10 +13,14 @@
             <img src="{PLAY_BUTTON}" alt="" />
         </div>
     </div> -->
+    <div class="about-lab">
+        <img src="{ABOUT_LAB}" alt="" />
+        <div class="overlay"></div>
+    </div>
 
     <div class="details-wrapper text-white">
         <div class="wrapper text-center">
-            <div class="py-5">
+            <div class="">
                 <h1 class="title">
                     <span class="text-green">The Crazy </span><span class="text-green">Scientist </span><br /> <span class="small">back Story</span>
                 </h1>
@@ -73,6 +78,9 @@
         }
 
         .details-wrapper {
+            margin-top: -10vw;
+            position: relative;
+            z-index:2;
             .title {
                 font-size: clamp(40px, 5vw, 94px);
                 line-height: 1;
@@ -88,8 +96,8 @@
                     text-align: center;
                 }
             }
-            .fs-xl-4{
-                font-size: clamp(18px , 2vw, 26px)
+            .fs-xl-4 {
+                font-size: clamp(18px, 2vw, 26px);
             }
 
             .right-side {
@@ -98,6 +106,22 @@
                     text-align: center;
                 }
             }
+        }
+    }
+    .about-lab {
+        width: 100vw;
+        position: relative;
+        z-index: 1;
+        & > img{
+            width:100%;
+        }
+
+        .overlay {
+            width: 100%;
+            height: 40%;
+            bottom: 0px;
+            position: absolute;
+            background: linear-gradient(to top, #000000 20.25%, rgba(0, 0, 0, 0) 92.2%);
         }
     }
 </style>

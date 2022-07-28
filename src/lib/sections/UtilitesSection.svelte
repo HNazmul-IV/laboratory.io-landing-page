@@ -7,6 +7,8 @@
     import ICON_ROCKET from "../../assets/icon/util-rocket.png";
     import ICON_LABSTORE from "../../assets/icon/lab-store.png";
     import ICON_LABDEX from "../../assets/icon/lab-dex.png";
+    import ICON_CERN from "../../assets/icon/util-CERN.png"
+    import ICON_GROWTH_CHAMBER from "../../assets/icon/util-Growth-Chamber.png"
 
     const utilities_data = [
         {
@@ -17,10 +19,12 @@
         {
             title: "Lab Growth Chambers",
             desc: "DeFi, Stake, grow, experiment with our NFTs and LAB token",
+            icon: ICON_GROWTH_CHAMBER
         },
         {
             title: "CERN",
             desc: "The Head of Laboratory has experiments for our community and unique token and NFT rewards Lab Pad. Launch your NFT or token and be empowered by the Laboratory community",
+            icon:ICON_CERN
         },
         {
             title: "Community",

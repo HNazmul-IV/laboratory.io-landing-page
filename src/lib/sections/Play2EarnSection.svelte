@@ -6,7 +6,7 @@
 </script>
 
 <section id="p2e">
-    <div class="section-wrapper py-3 py-lg-5">
+    <!-- <div class="section-wrapper py-3 py-lg-5">
         <div class="p2e-upper-image">
             <img src="{UPPER_IMG}" alt="" />
         </div>
@@ -28,7 +28,7 @@
                         <div class="wrapper text-center p-4  mx-auto">
                             <h3 class="text-green">About game</h3>
                             <p class="text-white">NFT collection packed with utilities NFT collection packed with utilities NFT collection packed with utilities NFT collection packed</p>
-                            <button class="green-button"> Play Now !</button>
+                            <button class="green-button"> Comming Soon</button>
                         </div>
                     </div>
                 </div>
@@ -37,6 +37,30 @@
         <div class="game-controller-img">
             <img src="{GAME_CONTROLLER_IMG}" alt="" />
         </div>
+    </div> -->
+    <div class="section-wrapper py-3 py-lg-5">
+        <div class="p2e-upper-image">
+            <img src="{UPPER_IMG}" alt="" />
+        </div>
+    </div>
+    <div class="p-1 pb-lg-5 about-game">
+        <div class="row justify-content-center ">
+            <div class="col-12 col-md-8 col-lg-7 col-xl-6">
+                <div class="details mt-5 py-4 pb-md-0">
+                    <div class="wrapper text-center p-4  mx-auto">
+                        <h3 class="text-green">About game</h3>
+                        <p class="text-white">
+                            Labverse will consist of gamified DeFi & mini games that will provide opportunities for the Laboratory community to win and earn. The value of Labverse will be interlinked
+                            with Lab’s gamified DeFi
+                        </p>
+                        <button class="green-button"> Coming Soon</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="console-img img-1"><img src="{GAME_CONTROLLER_IMG}" alt="" /></div>
+        <div class="console-img img-2"><img src="{GAME_CONTROLLER_IMG}" alt="" /></div>
     </div>
 </section>
 
@@ -68,9 +92,9 @@
             position: absolute;
             top: 73.3%;
             left: 37.2%;
-            width:14vw;
-            &> img{
-                width:100%;
+            width: 14vw;
+            & > img {
+                width: 100%;
             }
         }
     }
@@ -93,6 +117,7 @@
         }
     }
     .details {
+        
         & > .wrapper {
             & > h3 {
                 font-size: clamp(30px, 3vw, 58px);
@@ -110,6 +135,47 @@
                 border: none;
                 margin-top: 2rem;
             }
+        }
+    }
+
+    .about-game {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+    }
+    .console-img {
+        position: absolute;
+        z-index: -1;
+        animation: moving 20s infinite linear alternate;
+        width:10vw;
+        & > img{
+            width:100%;
+        }
+
+        &.img-1 {
+            top: 50%;
+            left: 6vw;
+        }
+        &.img-2 {
+            top: 40%;
+            right: 6vw;
+            animation-direction: alternate-reverse;
+
+            & > img {
+                transform: rotate(-60deg);
+            }
+        }
+    }
+
+    @keyframes moving {
+        0% {
+            transform: translate(0vw, 50%);
+        }
+        50% {
+            transform: translate(0vw, 0%);
+        }
+        100% {
+            transform: translate(0vw, -50%);
         }
     }
 </style>

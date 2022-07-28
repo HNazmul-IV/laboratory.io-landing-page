@@ -25,6 +25,7 @@
             outline: false,
             title: "Phase 2",
             desc: `<ul class="text-start roadmap-card-list">
+                        <li>LabDex V2</li>
                         <li>Lab Pad</li>
                         <li>CERN Laboratory</li>
                         <li>Compound X & Y</li>

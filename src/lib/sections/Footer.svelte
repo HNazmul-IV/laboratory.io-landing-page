@@ -8,7 +8,7 @@
 
     //HardCoded static Data;
     const iconsData = [
-        { icon: DISCORD_ICON, href: "https://discord.gg/SrZMWrVJ" },
+        { icon: DISCORD_ICON, href: "https://discord.com/invite/TheLaboratory" },
         { icon: TWITTER_ICON, href: "https://twitter.com/TheLaboratoryIO" },
         { icon: TELEGRAM_ICON, href: "https://t.me/thelaboratoryio" },
         { icon: GITBOOK_ICON, href: "https://app.gitbook.com/o/MiURbLpa3PCeyupCoxXs/s/0qREcbPE89fljJhGX6aY/?fbclid=IwAR3IP2sCm7msDg_h5rESNPVizBthu4pKYPxTkuoiNrs2cFOOpcNInPYt3j0" },
@@ -26,9 +26,9 @@
                     <img src="{BLACK_LOGO}" alt="" />
                 </a>
             </div>
-            <div class="text-center">
+            <!-- <div class="text-center">
                 <button class="btn bg-black text-white p-5 py-3 rounded-pill">Whitepaper</button>
-            </div>
+            </div> -->
             <div class="icons">
                 {#each iconsData as icon}
                     <a class="icon d-block" href="{icon.href}" target="_blank">

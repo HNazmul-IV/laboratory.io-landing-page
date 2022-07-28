@@ -88,37 +88,42 @@
         position: absolute;
         background: $green;
         left: 0px;
-
+        $bp-1: 1000px;
+        $bp-2: 653px;
         &.n1 {
             top: 28%;
-            // @include max(1249px) {
-            //     top: 20%;
-            // }
+            @include max($bp-1) {
+                top: 20%;
+            }
+            @include max($bp-2) {
+                top: 30%;
+            }
         }
         &.n2 {
             top: 20%;
             left: auto;
             right: 0px;
-            // @include max(1249px) {
-            //     top: 12%;
-            // }
+            @include max($bp-1) {
+                top: 12%;
+            }
         }
         &.n3 {
             top: 60%;
             left: auto;
             right: 0px;
+            @include max($bp-1) {
+                top: 45%;
+            }
         }
         &.n4 {
             top: 70%;
+            @include max($bp-1) {
+                top: 72%;
+            }
+            @include max($bp-2){
+                top:68%;
+            }
         }
-        @include media-breakpoint-down(sm) {
-            // @for $i from 1 through 4 {
-            //     &.n#{$i} {
-            //         top: 12% * $i;
-            //         @debug $i;
-            //     }
-            // }
-            display: none;
-        }
+       
     }
 </style>

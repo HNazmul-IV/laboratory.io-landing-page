@@ -79,7 +79,43 @@ body {
   }
 }
 
+.medium-blog-slider {
 
+  .swiper-slide {
+    transition: .5s;
+    transform: scale(0.75) !important;
+    --swiper-navigation-size: 200px;
+
+    .medium-blog-card {
+      // background: linear-gradient(to left, rgba(0, 0, 0, 0.8) 20.25%, rgba(0, 0, 0, 0) 92.2%);
+      background: radial-gradient(85.37% 85.37% at 16.04% 23.58%, #5E5E5E 0%, #000000 100%);
+      transition: 10s;
+    }
+  }
+
+  /*   .swiper-slide-prev {
+    .medium-blog-card {
+    }
+  }
+
+  .swiper-slide-next {
+    .medium-blog-card {
+      background: radial-gradient(85.37% 85.37% at 16.04% 23.58%, #5E5E5E 0%, #000000 100%);
+    }
+  } */
+
+  .swiper-slide-active {
+    transform: scale(1) !important;
+
+    .medium-blog-card {
+      background: radial-gradient(85.37% 85.37% at 16.04% 23.58%, #3d0063 0%, #000000 100%);
+    }
+  }
+
+  [class*="swiper-button"]::after {
+    display: none
+  }
+}
 
 
 

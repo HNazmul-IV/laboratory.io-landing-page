@@ -25,10 +25,10 @@
 
 <section id="lab">
     <div class="upper-ribon">
-        <img src={UPPER_RIBON} alt="" />
+        <img src="{UPPER_RIBON}" alt="" />
     </div>
     <div class="background">
-        <img src={BACKGROUND} alt="" />
+        <img src="{BACKGROUND}" alt="" />
     </div>
 
     <div class="content-wrapper">
@@ -40,20 +40,20 @@
             <div class="copy-btn ">
                 <div class="input-group rounded-pill mb-3 gap-2 p-md-3 p-1 bg-black">
                     <input
-                        bind:this={textInput}
+                        bind:this="{textInput}"
                         type="text"
                         class="form-control bg-transparent {copyStatus === 'Copied' ? 'vanish-select' : ''} border-0 text-white"
                         value="0x75f55e718ea51191966f256893bd96db2de9ee94"
-                        readonly
-                    />
-                    <button on:click={handleCopyButton} class="input-group-text rounded-pill {copyStatus === 'Copied' ? 'bg-success' : ''}" id="copy-btn">{copyStatus}</button>
+                        readonly />
+                    <button on:click="{handleCopyButton}" class="input-group-text rounded-pill {copyStatus === 'Copied' ? 'bg-success' : ''}" id="copy-btn">{copyStatus}</button>
                 </div>
             </div>
 
             <div class="all-buttons">
-                <button>LabDEX</button>
-                <button><img src={MMF_LOGO} alt="" /></button>
-                <button><img src={COINGECKO_LOGR} alt="" /> </button>
+                <a href="#lab" class="">LabDEX</a>
+                <a href="https://mm.finance/swap?inputCurrency=0x5c7f8a570d578ed84e63fdfa7b1ee72deae1ae23&outputCurrency=0x75f55e718ea51191966f256893bd96db2de9ee94" target="_blank" class=""
+                    ><img src="{MMF_LOGO}" alt="" /></a>
+                <a href="https://www.coingecko.com/en/coins/the-laboratory" target="_blank" class=""><img src="{COINGECKO_LOGR}" alt="" /> </a>
             </div>
         </div>
     </div>
@@ -108,7 +108,7 @@
             @include media-breakpoint-down(md) {
                 & > .headline {
                     font-size: 3.5vw;
-                     & > .large {
+                    & > .large {
                         font-size: 6.4vw;
                     }
                 }
@@ -139,23 +139,29 @@
         gap: 20px;
         padding: 20px 0;
 
+        a,
         button {
             font-size: clamp(20px, 2vw, 22px);
-            padding: 5px;
+            padding: 10px 20px;
             border-radius: 500px;
             background: $black;
             color: $green;
             min-width: 220px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
             & > img {
                 height: clamp(20px, 2.5vw, 50px);
             }
         }
         @include media-breakpoint-down(md) {
             justify-content: center;
-            gap:10px;
+            gap: 10px;
             flex-wrap: wrap;
+            a,
             button {
-                padding:5px 10px;
+                padding: 5px 10px;
                 min-width: initial;
                 font-size: 16px;
             }

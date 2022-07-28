@@ -25,8 +25,7 @@
             max-width: 1050px;
         }
         .image {
-            max-width: 185px;
-            width: 28%;
+            width: clamp(150px, 40%, 150px);
             margin-right: 4vw;
             img {
                 max-width: 200px;

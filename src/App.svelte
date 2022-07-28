@@ -14,7 +14,6 @@
 
 <NavBar />
 <TopSection />
-<LetsBeCrazySection />
 <AboutSection />
 <NftSections />
 <UtilitesSection />
@@ -22,4 +21,5 @@
 <LabSection />
 <RoadmapSection />
 <ScientistBehindSection />
+<LetsBeCrazySection />
 <Footer />
