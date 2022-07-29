@@ -30,9 +30,19 @@
             spaceBetween: -40,
         },
     };
+
+   
 </script>
 
-<Swiper on:slideChange modules="{[Navigation, Pagination]}" navigation="{true}" breakpoints="{breakpoints}" slidesPerView="{1}" centeredSlides="{true}" loop="{true}" class="medium-blog-slider">
+<Swiper
+    on:slideChange
+    modules="{[Navigation, Pagination]}"
+    navigation="{true}"
+    breakpoints="{breakpoints}"
+    slidesPerView="{1}"
+    centeredSlides="{true}"
+    loop="{true}"
+    class="medium-blog-slider">
     {#each slidersData as data}
         <SwiperSlide>
             <a href="{data?.link}" target="_blank" class="w-100 medium-blog-card d-block text-decoration-none">

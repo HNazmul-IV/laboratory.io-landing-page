@@ -23,7 +23,7 @@
         },
         {
             title: "CERN",
-            desc: "The Head of Laboratory has experiments for our community and unique token and NFT rewards Lab Pad. Launch your NFT or token and be empowered by the Laboratory community",
+            desc: "The Head of Laboratory has experiments for our community and unique token and NFT rewards.",
             icon:ICON_CERN
         },
         {

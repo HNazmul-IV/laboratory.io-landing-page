@@ -57,8 +57,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul bind:this={navbarUL} class="navbar-nav ms-auto my-2 my-lg-0">
-                <li class="nav-item ">
-                    <a class="nav-link active" href={"#top"}></a>
+                <li class="nav-item d-none">
+                    <a class="nav-link active" href={"#top"}>o</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href={"#about"}>About</a>
@@ -67,7 +67,7 @@
                     <a class="nav-link" href={"#nfts"}>NFT&nbsp;Collections</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href={"#p2e"}>Play&nbsp;&amp;&nbsp;Earn</a>
+                    <a class="nav-link" href={"#gamification"}>Gamification</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href={"#lab"}>$LAB</a>

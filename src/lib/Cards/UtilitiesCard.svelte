@@ -36,7 +36,7 @@
     }
     .details {
         & > h2 {
-            font-size: #{clamp(30px, 4vw, 42px)};
+            font-size: #{clamp(20px, 4vw, 42px)};
             letter-spacing: 0.06vw;
             @include media-breakpoint-up(xxl) {
             }

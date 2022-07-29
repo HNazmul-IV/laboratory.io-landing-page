@@ -10,7 +10,7 @@
 
 <header id="top">
     <div class="header-wrapper">
-        <!-- <img class="header-smoke" src="{HEADER_SMOKE}" alt="background" /> -->
+        <img class="header-smoke" src="{HEADER_SMOKE}" alt="background" />
         <McAnimation />
         <!-- <ShaderVideo/> -->
         <div class="nft">
@@ -55,13 +55,16 @@
 
         .header-smoke {
             width: 100%;
-            // position: absolute;
-            // z-index: -1;
+            position: absolute;
+            z-index: 1;
+            pointer-events: none;
+            opacity:0.9;
+
         }
         .nft > img,
         .cros > img {
             position: absolute;
-            z-index: 2;
+            z-index: 3;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -55%);
@@ -81,6 +84,7 @@
             top: 50%;
             transform: translateY(-50%);
             width: 25vw;
+            z-index: 2;
             & > img {
                 width: 100%;
             }
