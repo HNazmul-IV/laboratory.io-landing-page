@@ -12,7 +12,7 @@
             title: "Phase 1",
             desc: `<ul class="text-start roadmap-card-list">
                         <li>DeFi Ecosystem</li>
-                        <li>trading community on Cronos</li>
+                        <li>Trading community on Cronos.</li>
                         <li>Crazy Scientist NFT collection sold out</li>
                         <li>LAB token presale & launch</li>
                         <li>Lab DEX V1 deployed</li>
@@ -25,7 +25,7 @@
             outline: false,
             title: "Phase 2",
             desc: `<ul class="text-start roadmap-card-list">
-                        <li>LabDex V2</li>
+                        <li>Lab DEX V2</li>
                         <li>Lab Pad</li>
                         <li>CERN Laboratory</li>
                         <li>Compound X & Y</li>
