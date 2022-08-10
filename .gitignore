@@ -8,12 +8,12 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-dist
+public/cs-images/
+dist/cs-images
 dist-ssr
 public/cs-images
 dist/cs-images
 *.local
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
