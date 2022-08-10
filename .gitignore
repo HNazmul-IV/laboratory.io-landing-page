@@ -13,6 +13,7 @@ dist/cs-images
 dist-ssr
 public/cs-images
 public/lab-branding-video.mp4
+dist/lab-branding-video.mp4
 dist/cs-images
 *.local
 # Editor directories and files
