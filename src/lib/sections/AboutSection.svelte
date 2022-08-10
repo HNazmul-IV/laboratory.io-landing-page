@@ -2,17 +2,39 @@
     import VIDEO_PL from "../../assets/video-thumbnail.png";
     import PLAY_BUTTON from "../../assets/play-button.png";
     import ABOUT_LAB from "../../assets/about-lab.png";
+    import BRANDING_VIDEO_POSTER from "../../assets/branding-video-poster.png";
+    import { onMount } from "svelte";
+
+    let brandingVideo: HTMLVideoElement;
+    let playButton: HTMLDivElement;
+    let isPlaying = false;
+    let videoOverlay: HTMLDivElement;
+
+    const playPauseVideo = () => {
+        playButton.addEventListener("click", playing);
+
+        brandingVideo.addEventListener("ended", () => (isPlaying = false));
+
+        function playing() {
+            if (!isPlaying || brandingVideo.ended) {
+                isPlaying = true;
+                brandingVideo.play();
+                console.log("video playing");
+                videoOverlay.addEventListener("click", () => {
+                    brandingVideo.pause();
+                    isPlaying = false;
+                });
+            } else {
+                isPlaying = false;
+                brandingVideo.pause();
+            }
+        }
+    };
+
+    onMount(() => playPauseVideo());
 </script>
 
 <section id="about">
-    <!-- <div class="video-wrapper"></div>
-        <div class="video">
-            <img src="{VIDEO_PL}" alt="" srcset="" />
-        </div>
-        <div class="play-button">
-            <img src="{PLAY_BUTTON}" alt="" />
-        </div>
-    </div> -->
     <div class="about-lab">
         <img src="{ABOUT_LAB}" alt="" />
         <div class="overlay"></div>
@@ -38,11 +60,26 @@
             </div>
         </div>
     </div>
+
+    <div class="video-area">
+        <div class="video-over-text py-1 py-lg-5 position-absolute w-100 top-0">
+        </div>
+        <div class="video">
+            <div bind:this="{playButton}" class="play-button {isPlaying ? 'd-none' : ' '}">
+                <img src="{PLAY_BUTTON}" alt="play-button" />
+            </div>
+            <div bind:this="{videoOverlay}" class="video-overlay"></div>
+            <video bind:this="{brandingVideo}" class="branding-video" poster="{BRANDING_VIDEO_POSTER}">
+                <source src="./lab-branding-video.mp4" type="" />
+                <track kind="captions" />
+            </video>
+        </div>
+    </div>
 </section>
 
 <style lang="scss">
     #about {
-        padding-bottom: 4rem;
+        margin-bottom: -2.4vw;
         .video-wrapper {
             position: relative;
             z-index: 1;
@@ -68,8 +105,6 @@
                     animation: zoom-in-out 0.4s ease-in alternate infinite;
                     &:hover {
                         filter: drop-shadow(2px 2px 15px lighten($green, 10));
-                        // cursor: pointer;
-                        // transform: scale(0.8);
                         animation: none;
                         cursor: pointer;
                     }
@@ -80,7 +115,7 @@
         .details-wrapper {
             margin-top: -10vw;
             position: relative;
-            z-index:2;
+            z-index: 2;
             .title {
                 font-size: clamp(40px, 5vw, 94px);
                 line-height: 1;
@@ -97,7 +132,7 @@
                 }
             }
             .fs-xl-4 {
-                font-size: clamp(18px, 2vw, 26px);
+                font-size: clamp(16px, 2vw, 26px);
             }
 
             .right-side {
@@ -112,8 +147,8 @@
         width: 100vw;
         position: relative;
         z-index: 1;
-        & > img{
-            width:100%;
+        & > img {
+            width: 100%;
         }
 
         .overlay {
@@ -122,6 +157,71 @@
             bottom: 0px;
             position: absolute;
             background: linear-gradient(to top, #000000 20.25%, rgba(0, 0, 0, 0) 92.2%);
+        }
+    }
+
+    .video-area {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        padding-top: clamp(70px, 9vw, 200px);
+
+        // @media screen and (min-width: 1921px) {
+        //     bottom: -1vw;
+        // }
+        .video-over-text {
+            background: linear-gradient(180deg, #000000 0%, #000000 39.67%, rgba(11, 11, 11, 0) 100%);
+            height: 20vw;
+            z-index: 1;
+            @include media-breakpoint-down(md) {
+                height: 41vw;
+                h1 {
+                    font-size: 20px;
+                    color: $green !important;
+                }
+            }
+        }
+        .video-overlay {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 2;
+        }
+       
+        .video {
+            width: 100%;
+            position: relative;
+
+            .branding-video {
+                width: 100%;
+                aspect-ratio: 16 / 9;
+                max-width: 1920px;
+                max-height: 1100px;
+                display: block;
+                margin: auto;
+            }
+        }
+        .play-button {
+            width: clamp(70px, 10vw, 200px);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            transition: 0.3s;
+            border-radius: 30%;
+            cursor: pointer;
+            &:hover {
+                background: $green;
+                padding: clamp(5px, 2vw, 30px);
+                border-radius: 50%;
+            }
+            & > img {
+                width: 100%;
+            }
         }
     }
 </style>

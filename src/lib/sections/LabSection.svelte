@@ -130,6 +130,8 @@
                 background-color: $green;
                 border: none;
                 cursor: pointer;
+                padding: 10px clamp(10px, 3vw, 60px);
+                font-size: clamp(10px, 2vw, 25px)
             }
         }
     }

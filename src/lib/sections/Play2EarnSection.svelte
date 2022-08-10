@@ -145,7 +145,7 @@
             & > .green-button {
                 background: $green;
                 padding: 0.7rem 3.5rem;
-                font-size: 2.3vw;
+                font-size: 2vw;
                 border-radius: 1.3vw;
                 box-shadow: 0px 0px 20px 3px transparentize($color: $purple, $amount: 0.5), 0px 0px 100px 3px transparentize($color: $purple, $amount: 0.3);
                 border: none;

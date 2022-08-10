@@ -63,13 +63,15 @@
                     <div class="mint-area flex-column">
                         <h1 class="text-light mint-text">Mint:</h1>
                         <button class="green-button"> Sold Out </button>
-                        <button class="green-button second d-flex">
-                            <img src="{PROD_LOGO}" alt="" />
-                            <div class="text text-start">
-                                <p class="mb-0 small-text">Buy it on</p>
-                                <p class="mb-0">Ebisu's Bay</p>
-                            </div>
-                        </button>
+                        <a href="https://app.ebisusbay.com/collection/crazy-scientists" target="_blank" class="d-inline-block text-decoration-none">
+                            <button class="green-button second d-flex">
+                                <img src="{PROD_LOGO}" alt="" />
+                                <div class="text text-start">
+                                    <p class="mb-0 small-text">Buy it on</p>
+                                    <p class="mb-0">Ebisu's Bay</p>
+                                </div>
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -81,6 +83,9 @@
     section#nfts {
         background: url("../../assets/black-green-texture.png") center / 104%;
         overflow-x: hidden;
+        position: relative;
+        z-index: 2;
+
         @mixin sm {
             @include media-breakpoint-down(sm) {
                 @content;
