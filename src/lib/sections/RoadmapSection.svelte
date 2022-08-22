@@ -76,6 +76,9 @@
         .roadmap-content-wrapper {
             & > .row > .col {
                 padding: clamp(10px, 2.5vw, 2.7rem);
+                @include media-breakpoint-between(lg, xxl) {
+                    padding: 10px;
+                }
             }
         }
     }

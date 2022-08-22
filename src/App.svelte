@@ -3,7 +3,7 @@
     import AboutSection from "./lib/sections/AboutSection.svelte";
     import Footer from "./lib/sections/Footer.svelte";
     import LabSection from "./lib/sections/LabSection.svelte";
-    import LetsBeCrazySection from "./lib/sections/LetsBeCrazySection.svelte";
+    import LaboratoryUpdateSlider from "./lib/sections/LaboratoryUpdateSlider.svelte";
     import NftSections from "./lib/sections/Nft-sections.svelte";
     import Play2EarnSection from "./lib/sections/Play2EarnSection.svelte";
     import RoadmapSection from "./lib/sections/RoadmapSection.svelte";
@@ -21,5 +21,5 @@
 <LabSection />
 <RoadmapSection />
 <ScientistBehindSection />
-<LetsBeCrazySection />
+<LaboratoryUpdateSlider />
 <Footer />

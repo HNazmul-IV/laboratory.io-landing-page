@@ -62,7 +62,8 @@
     </div>
 
     <div class="video-area">
-        <div class="video-over-text py-1 py-lg-5 position-absolute w-100 top-0">
+        <div class="video-over-text py-1 py-lg-4 position-absolute w-100 top-0">
+            <!-- <h1 class="text-green text-center display-3">Crezy Scientist</h1> -->
         </div>
         <div class="video">
             <div bind:this="{playButton}" class="play-button {isPlaying ? 'd-none' : ' '}">
@@ -71,7 +72,7 @@
             <div bind:this="{videoOverlay}" class="video-overlay"></div>
             <video bind:this="{brandingVideo}" class="branding-video" poster="{BRANDING_VIDEO_POSTER}">
                 <source src="./lab-branding-video.mp4" type="" />
-                <track kind="captions" />
+                <track kind="captions" /> 
             </video>
         </div>
     </div>
@@ -80,37 +81,6 @@
 <style lang="scss">
     #about {
         margin-bottom: -2.4vw;
-        .video-wrapper {
-            position: relative;
-            z-index: 1;
-            .video {
-                & > img {
-                    width: 100%;
-                }
-            }
-            .play-button {
-                width: 10vw;
-                min-width: 80px;
-                max-width: 234px;
-                position: absolute;
-                z-index: 1;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-
-                & > img {
-                    width: 100%;
-                    height: 100%;
-                    transition: 0.2s ease-in;
-                    animation: zoom-in-out 0.4s ease-in alternate infinite;
-                    &:hover {
-                        filter: drop-shadow(2px 2px 15px lighten($green, 10));
-                        animation: none;
-                        cursor: pointer;
-                    }
-                }
-            }
-        }
 
         .details-wrapper {
             margin-top: -10vw;
@@ -133,13 +103,6 @@
             }
             .fs-xl-4 {
                 font-size: clamp(16px, 2vw, 26px);
-            }
-
-            .right-side {
-                padding: 2rem;
-                @include media-breakpoint-down(md) {
-                    text-align: center;
-                }
             }
         }
     }
@@ -165,20 +128,15 @@
         position: relative;
         z-index: 1;
         overflow: hidden;
-        padding-top: clamp(70px, 9vw, 200px);
+        padding-top: clamp(40px, 3.5vw, 200px);
 
-        // @media screen and (min-width: 1921px) {
-        //     bottom: -1vw;
-        // }
         .video-over-text {
             background: linear-gradient(180deg, #000000 0%, #000000 39.67%, rgba(11, 11, 11, 0) 100%);
-            height: 20vw;
+            height: 10vw;
             z-index: 1;
-            @include media-breakpoint-down(md) {
-                height: 41vw;
-                h1 {
-                    font-size: 20px;
-                    color: $green !important;
+            @include media-breakpoint-down(sm){
+                h1{
+                    font-size: 30px;
                 }
             }
         }
@@ -190,7 +148,7 @@
             left: 0px;
             z-index: 2;
         }
-       
+
         .video {
             width: 100%;
             position: relative;
@@ -198,8 +156,8 @@
             .branding-video {
                 width: 100%;
                 aspect-ratio: 16 / 9;
-                max-width: 1920px;
-                max-height: 1100px;
+                max-width: 2560px;
+                max-height: 1440px;
                 display: block;
                 margin: auto;
             }

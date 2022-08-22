@@ -64,7 +64,7 @@
                         <h1 class="text-light mint-text">Mint:</h1>
                         <button class="green-button"> Sold Out </button>
                         <a href="https://app.ebisusbay.com/collection/crazy-scientists" target="_blank" class="d-inline-block text-decoration-none">
-                            <button class="green-button second d-flex">
+                            <button style="width:100%" class="green-button second d-flex">
                                 <img src="{PROD_LOGO}" alt="" />
                                 <div class="text text-start">
                                     <p class="mb-0 small-text">Buy it on</p>
@@ -201,7 +201,7 @@
                 .mint-text {
                     font-size: clamp(90px, 9vw, 160px);
                     font-weight: 500;
-                    line-height: clamp(40px, 8vw, 85px);
+                    line-height: clamp(40px, 10vw, 85px);
 
                     @include sm {
                         font-size: 23vw;

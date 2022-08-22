@@ -11,7 +11,6 @@
     function clickReflect(clicker: HTMLElement, toClick: HTMLElement) {
         if (clicker) {
             clicker.addEventListener("click", () => {
-                console.log(clicker);
                 toClick.click();
             });
         }
@@ -27,6 +26,7 @@
 
     onMount(customNavigation);
 
+    //Slider Data;
     const slidersData = [
         {
             title: "New DEX, who dis?",
@@ -92,7 +92,7 @@
 </script>
 
 <div class="lets-be-crazy">
-    <div class="title text-white">
+    <div class="title text-white text-center text-sm-start">
         <h1>Laboratory <br /> Update</h1>
     </div>
     <div class="">
@@ -125,9 +125,11 @@
             padding: 4vw;
             padding-bottom: 0;
             h1 {
-                font-size: clamp(40px, 6vw, 80px);
+                font-size: clamp(30px, 6vw, 80px);
                 line-height: 1;
                 margin-left: 5vw;
+
+                
             }
         }
         .background {
@@ -172,7 +174,7 @@
                 }
             }
 
-            @include media-breakpoint-up(lg) {
+            @include media-breakpoint-up(md) {
                 height: 85vh;
             }
         }

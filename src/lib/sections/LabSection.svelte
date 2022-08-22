@@ -131,7 +131,7 @@
                 border: none;
                 cursor: pointer;
                 padding: 10px clamp(10px, 3vw, 60px);
-                font-size: clamp(10px, 2vw, 25px)
+                font-size: clamp(10px, 2vw, 25px);
             }
         }
     }
@@ -141,8 +141,7 @@
         gap: 20px;
         padding: 20px 0;
 
-        a,
-        button {
+        a {
             font-size: clamp(20px, 2vw, 22px);
             padding: 10px 20px;
             border-radius: 500px;
@@ -161,8 +160,7 @@
             justify-content: center;
             gap: 10px;
             flex-wrap: wrap;
-            a,
-            button {
+            a{
                 padding: 5px 10px;
                 min-width: initial;
                 font-size: 16px;

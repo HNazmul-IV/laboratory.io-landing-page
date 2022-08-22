@@ -99,40 +99,7 @@
         }
     }
 
-    .down-section-wrapper {
-        position: relative;
-        @include media-breakpoint-up(md) {
-            margin-top: -15vw;
-        }
 
-        .game-controller-img {
-            position: absolute;
-            top: 73.3%;
-            left: 37.2%;
-            width: 14vw;
-            & > img {
-                width: 100%;
-            }
-        }
-    }
-    .character {
-        & > img {
-            width: 36.5vw;
-            max-width: 698px;
-            transform: translateX(-0.1vw);
-        }
-    }
-    .phone-img {
-        position: relative;
-        width: 30vw;
-        @include media-breakpoint-up(xxl) {
-            margin-top: 8vw;
-        }
-        & > img {
-            width: 92%;
-            transform: translateX(4.8vw);
-        }
-    }
     .details {
         & > .wrapper {
             & > h3 {
