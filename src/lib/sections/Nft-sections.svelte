@@ -123,12 +123,18 @@
                     animation: moving-text 20s linear infinite;
                     --minus-move: calc(-100%);
                     font-weight: 900;
+                    @media screen and (min-width:2200px) {
+                        font-size: clamp(2.3em, 6vw, 7em);;
+                    }
                 }
                 .second {
                     font-weight: normal;
                     font-size: clamp(1.3em, 4vw, 2.5em);
                     animation: moving-text 30s linear 0s infinite;
                     --minus-move: calc(-100%);
+                    @media screen and (min-width:2200px) {
+                        font-size: clamp(1.3em, 4vw, 4em);
+                    }
                 }
             }
         }

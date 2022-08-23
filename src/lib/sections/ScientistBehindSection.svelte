@@ -36,7 +36,7 @@
             title: "<span='me-5'>Front <br/> End <br/> Developer</span=>",
         },
         {
-            name: "ODIN ",
+            name: "UMAIR",
             subtittle: "The Phsycotic",
             desc: "The most creative of the Crazy Scientists. Odin is most known for locking himself in his laboratory for 9 years to hone his skills in UX Design. He frequently conducts interplanetary experiments, combining his academic skills in communications design to close the gap between Cronos and other planets in the blockchain solar system.",
             avatar: ODIN_NFT,
