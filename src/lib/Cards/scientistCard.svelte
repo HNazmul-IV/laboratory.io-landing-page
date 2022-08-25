@@ -8,12 +8,12 @@
     </div>
     <div class="card-details">
         <div class="title">
-            <div class="row m-0 w-100 py-4 pb-2 justify-content-center align-items-center">
-                <div class="col-7 text-end name">
+            <div class="d-flex title-wrapper gap-3  py-4 pb-2 justify-content-center align-items-center">
+                <div class="text-end name">
                     <h1>{@html data?.name}</h1>
                     <p class="mb-0">{@html data?.subtittle}</p>
                 </div>
-                <div class="col-5 p-0">
+                <div class=" p-0">
                     <p class="text-green mb-0 poppins subtitle">{@html data?.title}</p>
                 </div>
             </div>
@@ -91,13 +91,13 @@
             position: relative;
             transition: 0.6s ease-in;
             padding: 5px;
-            // @include media-breakpoint-down(xxl){
-            //     .name{
-            //         h1{
-            //             font-size:
-            //         }
-            //     }
-            // }
+
+            .title {
+                .title-wrapper {
+                    width: fit-content;
+                    margin: auto;
+                }
+            }
 
             .name {
                 h1 {
