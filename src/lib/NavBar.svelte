@@ -41,39 +41,38 @@
 
 <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top" class:shrink>
     <div class="container-fluid more-horizontal-padding">
-        <a class="navbar-brand" href={"#"}><img src={logo} alt="..." /></a>
-        <button class="labdapps"><span class="text-green">Lab</span><span class="text-white">Dapps</span></button>
+        <a class="navbar-brand" href="{'#'}"><img src="{logo}" alt="..." /></a>
+        <a href="https://dapps.thelaboratory.io/" target="_blank" class="labdapps"><span class="text-green">Lab</span><span class="text-white">Dapps</span></a>
         <button
-            bind:this={barButton}
+            bind:this="{barButton}"
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
-            aria-label="Toggle navigation"
-        >
-            <span class="navbar-toggler-icon" />
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul bind:this={navbarUL} class="navbar-nav ms-auto my-2 my-lg-0">
+            <ul bind:this="{navbarUL}" class="navbar-nav ms-auto my-2 my-lg-0">
                 <li class="nav-item d-none">
-                    <a class="nav-link active" href={"#top"}>o</a>
+                    <a class="nav-link active" href="{'#top'}">o</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href={"#about"}>About</a>
+                    <a class="nav-link" href="{'#about'}">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href={"#nfts"}>NFT&nbsp;Collections</a>
+                    <a class="nav-link" href="{'#nfts'}">NFT&nbsp;Collections</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href={"#gamification"}>Gamification</a>
+                    <a class="nav-link" href="{'#gamification'}">Gamification</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href={"#lab"}>$LAB</a>
+                    <a class="nav-link" href="{'#lab'}">$LAB</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href={"#roadmap"}>Roadmap</a>
+                    <a class="nav-link" href="{'#roadmap'}">Roadmap</a>
                 </li>
             </ul>
         </div>
@@ -104,6 +103,7 @@
         font-size: 18px;
         margin: 0px;
         border: none;
+        text-decoration: none;
         &::after {
             position: absolute;
             content: "";
