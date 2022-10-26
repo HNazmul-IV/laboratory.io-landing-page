@@ -9,7 +9,7 @@
     const addRandomImg = () => {
         let limit = 300;
         let base_url = "cs-images";
-        return `${base_url}/nft-${Math.ceil(Math.random() * limit - 1)}.png`;
+        return `${base_url}/${Math.ceil(Math.random() * limit - 1)}.png`;
     };
 
     const addImgToAllElement = (elm: HTMLDivElement) => {
@@ -60,16 +60,16 @@
 <div class="nft-slider " bind:this={nftSliderArea}>
     <div class="nft-slider__wrapper">
         <div class="nft-card_slide_container" style="--right:100vw">
-            <NftCard image="/cs-images/nft-3.png" />
-            <NftCard image="/cs-images/nft-9.png" />
-            <NftCard image="/cs-images/nft-15.png" />
-            <NftCard image="/cs-images/nft-20.png" />
+            <NftCard image="/cs-images/3.png" />
+            <NftCard image="/cs-images/9.png" />
+            <NftCard image="/cs-images/15.png" />
+            <NftCard image="/cs-images/20.png" />
         </div>
         <div class="nft-card_slide_container" style="--right:0vw">
-            <NftCard image="cs-images/nft-14.png" />
-            <NftCard image="cs-images/nft-55.png" />
-            <NftCard image="cs-images/nft-40.png" />
-            <NftCard image="cs-images/nft-56.png" />
+            <NftCard image="cs-images/14.png" />
+            <NftCard image="cs-images/55.png" />
+            <NftCard image="cs-images/40.png" />
+            <NftCard image="cs-images/56.png" />
         </div>
     </div>
 </div>
