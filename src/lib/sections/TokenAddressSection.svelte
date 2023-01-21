@@ -34,7 +34,7 @@
     <div class="content-wrapper">
         <div class="content col-mi-9 offset-lg-3 offset-md-2 p-3 p-md-5">
             <div class="title">
-                <h1 class="headline text-black"><span class="large">$LAB</span> Token</h1>
+                <h1 class="headline text-black"><span class="large">$CERN</span> Token</h1>
                 <h3 class="subtitle text-black">Cronos Contact address</h3>
             </div>
             <div class="copy-btn ">
@@ -43,7 +43,7 @@
                         bind:this="{textInput}"
                         type="text"
                         class="form-control bg-transparent {copyStatus === 'Copied' ? 'vanish-select' : ''} border-0 text-white"
-                        value="0x75f55e718ea51191966f256893bd96db2de9ee94"
+                        value="0xaaAC538774E0ef058841E7fA6175c41CD5bd9c0e"
                         readonly />
                     <button on:click="{handleCopyButton}" class="input-group-text rounded-pill {copyStatus === 'Copied' ? 'bg-success' : ''}" id="copy-btn">{copyStatus}</button>
                 </div>
@@ -51,9 +51,12 @@
 
             <div class="all-buttons">
                 <a href="#lab" class="">LabDEX</a>
-                <a href="https://mm.finance/swap?inputCurrency=0x5c7f8a570d578ed84e63fdfa7b1ee72deae1ae23&outputCurrency=0x75f55e718ea51191966f256893bd96db2de9ee94" target="_blank" class=""
-                    ><img src="{MMF_LOGO}" alt="" /></a>
-                <a href="https://www.coingecko.com/en/coins/the-laboratory" target="_blank" class=""><img src="{COINGECKO_LOGR}" alt="" /> </a>
+                <a
+                    href="https://mm.finance/swap?inputCurrency=0x5c7f8a570d578ed84e63fdfa7b1ee72deae1ae23&outputCurrency=0x75f55e718ea51191966f256893bd96db2de9ee94"
+                    target="_blank"
+                    rel="noreferrer"
+                    class=""><img src="{MMF_LOGO}" alt="" /></a>
+                <a href="https://www.coingecko.com/en/coins/the-laboratory" target="_blank" class="" rel="noreferrer"><img src="{COINGECKO_LOGR}" alt="" /> </a>
             </div>
         </div>
     </div>
@@ -160,7 +163,7 @@
             justify-content: center;
             gap: 10px;
             flex-wrap: wrap;
-            a{
+            a {
                 padding: 5px 10px;
                 min-width: initial;
                 font-size: 16px;

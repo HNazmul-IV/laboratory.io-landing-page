@@ -7,7 +7,7 @@
     "css-build": "sass scss/app.scss public/app.css",
     "css-dev": "yarn css-build -w",
     "dev-will": "vite --host 128.199.156.210 --port 5000",
-    "dev-naz": "vite --host 128.199.156.210 --port 5001",
+    "dev-naz": "vite --host lab.naz.nz --port 5001",
     "build": "vite build",
     "preview": "vite --host 128.199.156.210 preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
