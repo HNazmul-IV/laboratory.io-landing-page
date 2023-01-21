@@ -1,0 +1,22 @@
+/* Variables and mixins declared here will be available in all other SCSS files */
+$green: #AEFF04;
+$purple: #7703C0;
+$white: #FFFFFF;
+$black: #000000;
+
+@mixin max-1500 {
+    @media screen and (max-width: 1500px) {
+        @content;
+    }
+}
+
+@mixin max($max-width: 0) {
+    @media screen and (max-width:$max-width) {
+        @content;
+    }
+}
+
+
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
