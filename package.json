@@ -1,13 +1,20 @@
 {
-  "name": "lab-v2",
+  "name": "lab",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "css-build": "sass scss/app.scss public/app.css",
+    "css-dev": "yarn css-build -w",
+    "dev-will": "vite --host 128.199.156.210 --port 5000",
+    "dev-naz": "vite --host 128.199.156.210 --port 5001",
     "build": "vite build",
-    "preview": "vite preview",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "preview": "vite --host 128.199.156.210 preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "sirv": "sirv dist -s -p 5555 -H 128.199.156.210",
+    "devo": "concurrently -n sirv,dev-svelte,dev-scss \"yarn sirv\" \"yarn dev-svelte\" \"yarn dev-scss\"",
+    "dev-scss": "yarn build-scss -w",
+    "dev-svelte": "nodemon -w src -e ts,css,svelte --exec yarn build"
   },
   "devDependencies": {
     "@popperjs/core": "^2.11.6",
