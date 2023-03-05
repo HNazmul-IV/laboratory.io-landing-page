@@ -40,12 +40,12 @@
         </div>
     </div> -->
     <div class="section-wrapper py-3 py-lg-5">
-        <div class="p2e-upper-image">
-            <div class="sidetext">
-                <h1><span class="text-white">Gamified </span> <br /> <span class="text-green"> DeFi</span></h1>
-            </div>
-            <img src="{GAMEFI_DEV_IMG}" alt="" />
+        <!-- <div class="p2e-upper-image">
+        <div class="sidetext">
+            <h1><span class="text-white">Gamified </span> <br /> <span class="text-green"> DeFi</span></h1>
         </div>
+        <img src="{GAMEFI_DEV_IMG}" alt="" />
+    </div> -->
         <div class="p-1 pb-lg-5 about-game">
             <div class="row justify-content-center ">
                 <div class="col-12 col-md-8 col-lg-7 col-xl-6">
@@ -98,7 +98,6 @@
             width: 101%;
         }
     }
-
 
     .details {
         & > .wrapper {
