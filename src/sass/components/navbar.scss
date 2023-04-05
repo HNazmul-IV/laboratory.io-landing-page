@@ -1,0 +1,147 @@
+@use "../variables.scss" as *;
+
+.more-horizontal-padding {
+  @include media-breakpoint-up(md) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+.navbar-brand img {
+  height: 2rem;
+  transition: height 0.3s ease-in-out;
+}
+$nav-bg-color: black;
+
+.lab-dapss-button {
+  background: transparent;
+  position: relative;
+  padding: 7px 15px;
+  z-index: 1;
+  font-size: 18px;
+  margin: 0px;
+  border: none;
+  text-decoration: none;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    border: 3px solid $green;
+    border-radius: 50px;
+    filter: drop-shadow(0px 0px 2px #aeff04);
+  }
+}
+
+nav {
+  background-color: $nav-bg-color;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: $nav-bg-color;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .shrink {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: $nav-bg-color;
+  }
+  nav {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border: none;
+    background-color: transparent;
+    transition: padding-top 0.5s ease-in-out, padding-bottom 0.5s ease-in-out,
+      background 0.5s ease-in-out;
+  }
+}
+
+div.navbar-contents {
+  width: 100%;
+  height: 100%;
+  background: black;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 9999;
+  display: flex;
+
+  --left-content-width: 400px;
+
+  .left-content {
+    width: 400px;
+    background: $green;
+    flex-shrink: 0;
+  }
+  .right-content {
+    position: relative;
+    width: calc(100% - var(--left-content-width));
+    z-index: 1;
+    .right-content-bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      & > img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .right-content-skull {
+      position: absolute;
+      top: 0px;
+      z-index: 100;
+      right: 0px;
+      height: 100%;
+    }
+  }
+}
+
+.navbar-item-list-wrapper {
+  border: 5px solid red;
+  position: absolute;
+  top: 0px;
+  z-index: 10;
+  left: 0px;
+  height: 100%;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.navbar-item-list {
+  padding: 4rem;
+  .navbar-item {
+    list-style: none;
+    line-height: 1.2em;
+    font-size: 5rem;
+    transition: 0.3s;
+    .navbar-link {
+      color: white;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    &:hover {
+      line-height: 1.5em;
+      transform: translateX(1rem);
+      .navbar-link {
+        color: $success;
+      }
+    }
+  }
+}
+
+.back-button {
+  padding: 4rem;
+  .btn {
+    font-size: 2rem;
+    padding: 0rem 4rem;
+    border-radius: 3rem;
+  }
+}

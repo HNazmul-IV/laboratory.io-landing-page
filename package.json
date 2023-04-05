@@ -14,7 +14,8 @@
     "sirv": "sirv dist -s -p 5555 -H 128.199.156.210",
     "devo": "concurrently -n sirv,dev-svelte,dev-scss \"yarn sirv\" \"yarn dev-svelte\" \"yarn dev-scss\"",
     "dev-scss": "yarn build-scss -w",
-    "dev-svelte": "nodemon -w src -e ts,css,svelte --exec yarn build"
+    "dev-svelte": "nodemon -w src -e ts,css,svelte --exec yarn build",
+    "format": "prettier --write './src/**/*.{css,html,js,svelte,ts,scss,json,md,lock}'"
   },
   "devDependencies": {
     "@popperjs/core": "^2.11.6",
@@ -24,6 +25,8 @@
     "bootstrap": "^5.2.3",
     "concurrently": "^7.6.0",
     "nodemon": "^2.0.20",
+    "prettier": "^2.8.7",
+    "prettier-plugin-svelte": "^2.10.0",
     "sass": "^1.57.1",
     "sirv-cli": "^2.0.2",
     "svelte": "^3.54.0",
@@ -33,6 +36,7 @@
     "vite": "^4.0.0"
   },
   "dependencies": {
+    "pkill": "^2.0.0",
     "svelte-preprocess": "^5.0.1",
     "swiper": "^8.4.6",
     "vanilla-tilt": "^1.8.0"

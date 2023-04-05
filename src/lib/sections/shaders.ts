@@ -1,4 +1,3 @@
-
 export const defaultVertSrc = `
 attribute vec3 aPosition;
 attribute vec2 aTexCoord;
@@ -12,7 +11,7 @@ void main() {
   positionVec4.xy = positionVec4.xy * 2.0 - 1.0;
 
   gl_Position = positionVec4;
-}`
+}`;
 
 export const defaultFragSrc = `
 
@@ -254,4 +253,4 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
 void main() {
   mainImage(gl_FragColor, vTexCoord*iResolution.xy);
 }
-`
+`;

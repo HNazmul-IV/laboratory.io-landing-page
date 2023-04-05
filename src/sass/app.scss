@@ -9,27 +9,35 @@
   font-family: "Monument Extended";
   src: url("//db.onlinewebfonts.com/t/99501fdab737541e9315ceaf9229370f.eot");
   /* IE9*/
-  src: url("//db.onlinewebfonts.com/t/99501fdab737541e9315ceaf9229370f.eot?#iefix") format("embedded-opentype"),
+  src: url("//db.onlinewebfonts.com/t/99501fdab737541e9315ceaf9229370f.eot?#iefix")
+      format("embedded-opentype"),
     /* IE6-IE8 */
-    url("//db.onlinewebfonts.com/t/99501fdab737541e9315ceaf9229370f.woff2") format("woff2"),
+      url("//db.onlinewebfonts.com/t/99501fdab737541e9315ceaf9229370f.woff2")
+      format("woff2"),
     /* chrome firefox */
-    url("//db.onlinewebfonts.com/t/99501fdab737541e9315ceaf9229370f.woff") format("woff"),
+      url("//db.onlinewebfonts.com/t/99501fdab737541e9315ceaf9229370f.woff")
+      format("woff"),
     /* chrome firefox */
-    url("//db.onlinewebfonts.com/t/99501fdab737541e9315ceaf9229370f.ttf") format("truetype"),
+      url("//db.onlinewebfonts.com/t/99501fdab737541e9315ceaf9229370f.ttf")
+      format("truetype"),
     /* chrome firefox opera Safari, Android, iOS 4.2+*/
-    url("//db.onlinewebfonts.com/t/99501fdab737541e9315ceaf9229370f.svg#Monument Extended") format("svg");
+      url("//db.onlinewebfonts.com/t/99501fdab737541e9315ceaf9229370f.svg#Monument Extended")
+      format("svg");
   /* iOS 4.1- */
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-$font-family-sans-serif: "Monument Extended", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif: "Monument Extended", system-ui, -apple-system,
+  "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans",
+  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+  "Noto Color Emoji" !default;
 
 $input-btn-focus-width: 0 !default;
 
-$green: #AEFF04;
-$purple: #7703C0;
-$white: #FFFFFF;
+$green: #aeff04;
+$purple: #7703c0;
+$white: #ffffff;
 $black: #000000;
 
 $grid-breakpoints: (
@@ -38,15 +46,14 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1400px
+  xxl: 1400px,
 );
-@import 'bootstrap/scss/bootstrap.scss';
+@import "bootstrap/scss/bootstrap.scss";
 
 /* multiple components */
 .poppins {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-
 
 html {
   scroll-padding-top: 40px;
@@ -74,10 +81,8 @@ body {
   }
 }
 
-
 .roadmap-card-list {
   padding-left: 12% !important;
-
 
   li {
     list-style: none;
@@ -95,7 +100,7 @@ body {
       top: 5px;
 
       @include media-breakpoint-between(lg, xxl) {
-        left: - 12%;
+        left: -12%;
       }
     }
   }
@@ -106,28 +111,34 @@ body {
 }
 
 .medium-blog-slider {
-
   .swiper-slide {
-    transition: .5s;
+    transition: 0.5s;
     transform: scale(0.75) !important;
     --swiper-navigation-size: 200px;
 
     .medium-blog-card {
-      background: radial-gradient(85.37% 85.37% at 16.04% 23.58%, #5E5E5E 0%, #000000 100%);
+      background: radial-gradient(
+        85.37% 85.37% at 16.04% 23.58%,
+        #5e5e5e 0%,
+        #000000 100%
+      );
       transition: 10s;
     }
   }
-
 
   .swiper-slide-active {
     transform: scale(1) !important;
 
     .medium-blog-card {
-      background: radial-gradient(85.37% 85.37% at 16.04% 23.58%, #3d0063 0%, #000000 100%);
+      background: radial-gradient(
+        85.37% 85.37% at 16.04% 23.58%,
+        #3d0063 0%,
+        #000000 100%
+      );
     }
   }
 
   [class*="swiper-button"]::after {
-    display: none
+    display: none;
   }
 }
