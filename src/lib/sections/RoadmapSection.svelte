@@ -52,9 +52,7 @@
   </div>
 
   <div class="roadmap-content-wrapper p-5">
-    <div
-      class="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center g-5"
-    >
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center g-5">
       {#each card_conf as conf}
         <div class="col">
           <RoadMapCard {conf} />
@@ -66,8 +64,7 @@
 
 <style lang="scss">
   section {
-    background: url("../../assets/black-green-texture.png") no-repeat center /
-      cover;
+    background: url("../../assets/black-green-texture.png") no-repeat center / cover;
     & > .title {
       & > h1 {
         font-size: clamp(40px, 8vw, 154px);

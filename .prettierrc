@@ -4,5 +4,7 @@
   "tabWidth": 2,
   "svelteAllowShorthand": true,
   "svelteBracketNewLine": false,
-  "svelteIndentScriptAndStyle": true
+  "svelteIndentScriptAndStyle": true,
+  "singleAttributePerLine": false,
+  "printWidth": 150
 }

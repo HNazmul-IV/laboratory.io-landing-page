@@ -44,11 +44,7 @@
 >
   {#each slidersData as data}
     <SwiperSlide>
-      <a
-        href={data?.link}
-        target="_blank"
-        class="w-100 medium-blog-card d-block text-decoration-none"
-      >
+      <a href={data?.link} target="_blank" class="w-100 medium-blog-card d-block text-decoration-none">
         <div class="card-wrapper">
           <div class="medium-icon">
             <img src={ICON_MEDIUM} alt="" />

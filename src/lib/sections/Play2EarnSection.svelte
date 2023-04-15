@@ -53,10 +53,8 @@
             <div class="wrapper text-center p-4 mx-auto">
               <h3 class="text-green">About Gamified DeFi</h3>
               <p class="text-white">
-                Labverse will consist of gamified DeFi & mini games that will
-                provide opportunities for the Laboratory community to win and
-                earn. The value of Labverse will be interlinked with Lab’s
-                gamified DeFi
+                Labverse will consist of gamified DeFi & mini games that will provide opportunities for the Laboratory community to win and earn. The
+                value of Labverse will be interlinked with Lab’s gamified DeFi
               </p>
               <button class="green-button"> Coming Soon</button>
             </div>
@@ -76,8 +74,7 @@
 
 <style lang="scss">
   section {
-    background: url("../../assets/black-green-texture.png") no-repeat center /
-      cover;
+    background: url("../../assets/black-green-texture.png") no-repeat center / cover;
     overflow-x: hidden;
     @include media-breakpoint-up(md) {
       margin-top: -2%;
@@ -120,9 +117,7 @@
         padding: 0.7rem 3.5rem;
         font-size: 2vw;
         border-radius: 1.3vw;
-        box-shadow: 0px 0px 20px 3px
-            transparentize($color: $purple, $amount: 0.5),
-          0px 0px 100px 3px transparentize($color: $purple, $amount: 0.3);
+        box-shadow: 0px 0px 20px 3px transparentize($color: $purple, $amount: 0.5), 0px 0px 100px 3px transparentize($color: $purple, $amount: 0.3);
         border: none;
         margin-top: 2rem;
       }

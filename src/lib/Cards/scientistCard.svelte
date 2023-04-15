@@ -14,9 +14,7 @@
   </div>
   <div class="card-details">
     <div class="title">
-      <div
-        class="d-flex title-wrapper gap-3 py-4 pb-2 justify-content-center align-items-center"
-      >
+      <div class="d-flex title-wrapper gap-3 py-4 pb-2 justify-content-center align-items-center">
         <div class="text-end name">
           <h1>{@html data?.name}</h1>
           <p class="mb-0">{@html data?.subtittle}</p>

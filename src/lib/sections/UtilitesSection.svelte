@@ -75,8 +75,7 @@
 
 <style lang="scss">
   section {
-    background: url("../../assets/black-green-texture.png") no-repeat center /
-      cover;
+    background: url("../../assets/black-green-texture.png") no-repeat center / cover;
     overflow-x: hidden;
   }
   section > .title h1 {

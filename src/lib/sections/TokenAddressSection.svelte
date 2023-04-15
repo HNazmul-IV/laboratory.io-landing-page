@@ -44,18 +44,12 @@
           <input
             bind:this={textInput}
             type="text"
-            class="form-control bg-transparent {copyStatus === 'Copied'
-              ? 'vanish-select'
-              : ''} border-0 text-white"
+            class="form-control bg-transparent {copyStatus === 'Copied' ? 'vanish-select' : ''} border-0 text-white"
             value="0xaaAC538774E0ef058841E7fA6175c41CD5bd9c0e"
             readonly
           />
-          <button
-            on:click={handleCopyButton}
-            class="input-group-text rounded-pill {copyStatus === 'Copied'
-              ? 'bg-success'
-              : ''}"
-            id="copy-btn">{copyStatus}</button
+          <button on:click={handleCopyButton} class="input-group-text rounded-pill {copyStatus === 'Copied' ? 'bg-success' : ''}" id="copy-btn"
+            >{copyStatus}</button
           >
         </div>
       </div>
@@ -68,13 +62,7 @@
           rel="noreferrer"
           class=""><img src={MMF_LOGO} alt="" /></a
         >
-        <a
-          href="https://www.coingecko.com/en/coins/the-laboratory"
-          target="_blank"
-          class=""
-          rel="noreferrer"
-          ><img src={COINGECKO_LOGR} alt="" />
-        </a>
+        <a href="https://www.coingecko.com/en/coins/the-laboratory" target="_blank" class="" rel="noreferrer"><img src={COINGECKO_LOGR} alt="" /> </a>
       </div>
     </div>
   </div>

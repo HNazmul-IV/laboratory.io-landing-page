@@ -40,22 +40,12 @@
     </div>
     <div class="nft-slide-text">
       <div class="d-flex">
-        <h1 class={"text-green prime"}>
-          Play to earn with NFT collection on cronos.&nbsp;&nbsp;&nbsp;
-        </h1>
-        <h1 class={"text-green prime"}>
-          Play to earn with NFT collection on cronos.&nbsp;&nbsp;&nbsp;
-        </h1>
+        <h1 class={"text-green prime"}>Play to earn with NFT collection on cronos.&nbsp;&nbsp;&nbsp;</h1>
+        <h1 class={"text-green prime"}>Play to earn with NFT collection on cronos.&nbsp;&nbsp;&nbsp;</h1>
       </div>
       <div class="d-flex" style="">
-        <h3 class="text-light second">
-          NFT collection packed with utilities. NFT collection packed with
-          utilities.&nbsp;&nbsp;&nbsp;
-        </h3>
-        <h3 class="text-light second">
-          NFT collection packed with utilities. NFT collection packed with
-          utilities.&nbsp;&nbsp;&nbsp;
-        </h3>
+        <h3 class="text-light second">NFT collection packed with utilities. NFT collection packed with utilities.&nbsp;&nbsp;&nbsp;</h3>
+        <h3 class="text-light second">NFT collection packed with utilities. NFT collection packed with utilities.&nbsp;&nbsp;&nbsp;</h3>
       </div>
     </div>
   </div>
@@ -77,11 +67,7 @@
           <div class="mint-area flex-column">
             <h1 class="text-light mint-text">Mint:</h1>
             <button class="green-button"> Sold Out </button>
-            <a
-              href="https://app.ebisusbay.com/collection/crazy-scientists"
-              target="_blank"
-              class="d-inline-block text-decoration-none"
-            >
+            <a href="https://app.ebisusbay.com/collection/crazy-scientists" target="_blank" class="d-inline-block text-decoration-none">
               <button style="width:100%" class="green-button second d-flex">
                 <img src={PROD_LOGO} alt="" />
                 <div class="text text-start">
@@ -179,8 +165,7 @@
           height: 100%;
           top: 0px;
           left: 0px;
-          filter: drop-shadow(0px 0px 0.4vw $green)
-            drop-shadow(0px 0px 1.5vw transparentize($green, 0.1));
+          filter: drop-shadow(0px 0px 0.4vw $green) drop-shadow(0px 0px 1.5vw transparentize($green, 0.1));
           border: 15px solid $green;
           border-radius: 3.5vw;
 

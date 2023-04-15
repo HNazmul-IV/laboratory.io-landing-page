@@ -17,12 +17,8 @@
   }
 
   function customNavigation() {
-    const prevButton: HTMLDivElement = document.querySelector(
-      ".medium-blog-slider-container .swiper-button-prev"
-    );
-    const nextButton: HTMLDivElement = document.querySelector(
-      ".medium-blog-slider-container .swiper-button-next"
-    );
+    const prevButton: HTMLDivElement = document.querySelector(".medium-blog-slider-container .swiper-button-prev");
+    const nextButton: HTMLDivElement = document.querySelector(".medium-blog-slider-container .swiper-button-next");
 
     clickReflect(myNextButton, nextButton);
     clickReflect(myPrevButton, prevButton);
@@ -185,11 +181,7 @@
       width: 40vw;
       height: 100%;
       position: absolute;
-      background: linear-gradient(
-        to left,
-        rgba(0, 0, 0, 0.8) 20.25%,
-        rgba(0, 0, 0, 0) 92.2%
-      );
+      background: linear-gradient(to left, rgba(0, 0, 0, 0.8) 20.25%, rgba(0, 0, 0, 0) 92.2%);
       top: 0px;
       z-index: 2;
       pointer-events: none;

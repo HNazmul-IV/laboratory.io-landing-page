@@ -19,7 +19,6 @@ $nav-bg-color: black;
   z-index: 1;
   font-size: 18px;
   margin: 0px;
-  border: none;
   text-decoration: none;
   &::after {
     position: absolute;
@@ -54,8 +53,7 @@ nav {
     padding-bottom: 2rem;
     border: none;
     background-color: transparent;
-    transition: padding-top 0.5s ease-in-out, padding-bottom 0.5s ease-in-out,
-      background 0.5s ease-in-out;
+    transition: padding-top 0.5s ease-in-out, padding-bottom 0.5s ease-in-out, background 0.5s ease-in-out;
   }
 }
 
@@ -98,50 +96,5 @@ div.navbar-contents {
       right: 0px;
       height: 100%;
     }
-  }
-}
-
-.navbar-item-list-wrapper {
-  border: 5px solid red;
-  position: absolute;
-  top: 0px;
-  z-index: 10;
-  left: 0px;
-  height: 100%;
-  width: 75%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.navbar-item-list {
-  padding: 4rem;
-  .navbar-item {
-    list-style: none;
-    line-height: 1.2em;
-    font-size: 5rem;
-    transition: 0.3s;
-    .navbar-link {
-      color: white;
-      display: inline-block;
-      text-decoration: none;
-    }
-
-    &:hover {
-      line-height: 1.5em;
-      transform: translateX(1rem);
-      .navbar-link {
-        color: $success;
-      }
-    }
-  }
-}
-
-.back-button {
-  padding: 4rem;
-  .btn {
-    font-size: 2rem;
-    padding: 0rem 4rem;
-    border-radius: 3rem;
   }
 }

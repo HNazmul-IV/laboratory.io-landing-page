@@ -28,23 +28,12 @@
 
       //animate function for both LTR and RTL
       const animate = () => {
-        const {
-          right: elemenRightPosition,
-          left: elementLeftPosition,
-        }: DOMRect = elem.getBoundingClientRect();
-        const {
-          right: parentRightPosition,
-          left: parentLeftPosition,
-        }: DOMRect = nftSliderArea.getBoundingClientRect();
+        const { right: elemenRightPosition, left: elementLeftPosition }: DOMRect = elem.getBoundingClientRect();
+        const { right: parentRightPosition, left: parentLeftPosition }: DOMRect = nftSliderArea.getBoundingClientRect();
         if (directions === "ltr") {
           translate = translate + speed;
           elem.style.transform = `translateX(${translate}vw)`;
-          if (
-            elemenRightPosition >
-            parentRightPosition +
-              elem.clientWidth +
-              (2 * window.innerWidth) / 100
-          ) {
+          if (elemenRightPosition > parentRightPosition + elem.clientWidth + (2 * window.innerWidth) / 100) {
             translate = 0;
             elem.style.right = "100vw";
             addImgToAllElement(elem);
@@ -52,12 +41,7 @@
         } else if (directions === "rtl") {
           translate = translate - speed;
           elem.style.transform = `translateX(${translate}vw)`;
-          if (
-            elementLeftPosition <
-            parentLeftPosition -
-              elem.clientWidth -
-              (2 * window.innerWidth) / 100
-          ) {
+          if (elementLeftPosition < parentLeftPosition - elem.clientWidth - (2 * window.innerWidth) / 100) {
             translate = 0;
             elem.style.left = "100vw";
             addImgToAllElement(elem);

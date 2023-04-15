@@ -44,25 +44,18 @@
     <div class="wrapper text-center">
       <div class="">
         <h1 class="title">
-          <span class="text-green">The Crazy </span><span class="text-green"
-            >Scientist
-          </span><br /> <span class="small">back Story</span>
+          <span class="text-green">The Crazy </span><span class="text-green">Scientist </span><br /> <span class="small">back Story</span>
         </h1>
         <div class="p-2 p-lg-5 px-xxl-0 col-xxl-10 mx-auto">
           <p class="poppins fs-xl-4 mb-4 fw-light">
-            Far out in the uncharted areas of the universe lies The Blockchain
-            solar system which consists of 8 known planets and all orbiting the
-            center, Bitcoin a golden magnificent star that provides sanctity to
-            its neighboring planets.
+            Far out in the uncharted areas of the universe lies The Blockchain solar system which consists of 8 known planets and all orbiting the
+            center, Bitcoin a golden magnificent star that provides sanctity to its neighboring planets.
           </p>
           <p class="poppins fs-xl-4 fw-light">
-            The 3rd planet from the center is Cronos, a deep sapphire blue
-            colored planet and populated by varying humanoid species,
-            collectively known as #CROFam. Cronos is a relatively young planet
-            and the birthplace of a life form, Crazy Scientists. Not much is
-            known about the background of the Crazy Scientists other than they
-            have been around since inception and surfaced relatively late from
-            the underground Laboratories.
+            The 3rd planet from the center is Cronos, a deep sapphire blue colored planet and populated by varying humanoid species, collectively
+            known as #CROFam. Cronos is a relatively young planet and the birthplace of a life form, Crazy Scientists. Not much is known about the
+            background of the Crazy Scientists other than they have been around since inception and surfaced relatively late from the underground
+            Laboratories.
           </p>
         </div>
       </div>
@@ -74,18 +67,11 @@
       <!-- <h1 class="text-green text-center display-3">Crezy Scientist</h1> -->
     </div>
     <div class="video">
-      <div
-        bind:this={playButton}
-        class="play-button {isPlaying ? 'd-none' : ' '}"
-      >
+      <div bind:this={playButton} class="play-button {isPlaying ? 'd-none' : ' '}">
         <img src={PLAY_BUTTON} alt="play-button" />
       </div>
       <div bind:this={videoOverlay} class="video-overlay" />
-      <video
-        bind:this={brandingVideo}
-        class="branding-video"
-        poster={BRANDING_VIDEO_POSTER}
-      >
+      <video bind:this={brandingVideo} class="branding-video" poster={BRANDING_VIDEO_POSTER}>
         <source src="./lab-branding-video.mp4" type="" />
         <track kind="captions" />
       </video>
@@ -134,11 +120,7 @@
       height: 40%;
       bottom: 0px;
       position: absolute;
-      background: linear-gradient(
-        to top,
-        #000000 20.25%,
-        rgba(0, 0, 0, 0) 92.2%
-      );
+      background: linear-gradient(to top, #000000 20.25%, rgba(0, 0, 0, 0) 92.2%);
     }
   }
 
@@ -150,12 +132,7 @@
     padding-top: clamp(40px, 3.5vw, 200px);
 
     .video-over-text {
-      background: linear-gradient(
-        180deg,
-        #000000 0%,
-        #000000 39.67%,
-        rgba(11, 11, 11, 0) 100%
-      );
+      background: linear-gradient(180deg, #000000 0%, #000000 39.67%, rgba(11, 11, 11, 0) 100%);
       height: 10vw;
       z-index: 1;
       @include media-breakpoint-down(sm) {

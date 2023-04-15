@@ -60,8 +60,7 @@
 <style lang="scss">
   @use "sass:math";
   section {
-    background: url("../../assets/black-green-texture.png") no-repeat center /
-      cover;
+    background: url("../../assets/black-green-texture.png") no-repeat center / cover;
     position: relative;
     z-index: 1;
   }

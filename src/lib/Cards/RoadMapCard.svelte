@@ -13,15 +13,7 @@
   });
 </script>
 
-<article
-  data-tilt
-  bind:this={card}
-  class="roadmap-card {conf.shadow
-    ? 'shadow'
-    : conf.outline
-    ? 'outline'
-    : 'pure'}"
->
+<article data-tilt bind:this={card} class="roadmap-card {conf.shadow ? 'shadow' : conf.outline ? 'outline' : 'pure'}">
   <div class="card-header">
     <h3>{conf.title || "Phase 1"}</h3>
   </div>
